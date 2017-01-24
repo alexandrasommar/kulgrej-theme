@@ -6,7 +6,8 @@ add_action( 'after_setup_theme', 'fed16_blog_setup' );
 function fed16_blog_setup () {
 	wp_enqueue_style( 'main', get_template_directory_uri() . '/css/style.css', null, '1.0', 'all' ); //1.0 gör att css:en inte cachas
 
-	wp_enqueue_style( 'roboto', '//fonts.googleapis.com/css?family=Roboto' ); // god praxis är att bara göra slash slash för att ladda in scripts
+	wp_enqueue_style( 'roboto', '//fonts.googleapis.com/css?family=Josefin+Sans:300,400,700' ); // god praxis är att bara göra slash slash för att ladda in scripts
+	wp_enqueue_script( 'font-awesome_js', '//use.fontawesome.com/af24f8bf7a.js' );
 
 	register_nav_menu( 'mainmenu', 'Website main navigation' );
 
@@ -24,12 +25,28 @@ function fed16_blog_setup () {
 
 	// Register sidebar
 	register_sidebar( array(
-		"name"			=> __( "Footer", "fed16" ),
+		"name"			=> __( "Footer", "kulgrej" ),
 		"id"			=> "footer1",
-		"description"	=> __( "Column 1 in footer", "fed16" ),
-		"before_widget"	=> "<div class='footer footer-col-1'>",
+		"description"	=> __( "Column 1 in footer", "kulgrej" ),
+		"before_widget"	=> "<div class='footer-col-1'>",
 		"after_widget"	=> "</div>",
-		));
+	) );
+
+	register_sidebar( array(
+		"name"			=> __( "Footer", "kulgrej" ),
+		"id"			=> "footer2",
+		"description"	=> __( "Column 2 in footer", "kulgrej" ),
+		"before_widget"	=> "<div class='footer-col-2'>",
+		"after_widget"	=> "</div>",
+	) );
+
+	register_sidebar( array(
+		"name"			=> __( "Footer", "kulgrej" ),
+		"id"			=> "footer3",
+		"description"	=> __( "Column 3 in footer", "kulgrej" ),
+		"before_widget"	=> "<div class='footer-col-3'>",
+		"after_widget"	=> "</div>",
+	) );
 }
 
 ?>
