@@ -8,7 +8,7 @@
 <header>
 	<nav>
 		<div class="left">
-hej
+
 		</div>
 		<div class="right">
 			<?php wp_nav_menu(array('theme_location' => 'mainmenu')); ?>

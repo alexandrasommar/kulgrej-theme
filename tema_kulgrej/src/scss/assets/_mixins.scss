@@ -3,3 +3,8 @@ $a-tags-hover: 'a:active, a:hover';
 
 $a-menu: 'a, a:active, a:hover, a:visited';
 $a-menu-hover: 'a:active, a:hover';
+
+
+@mixin orange-line {
+	border-bottom: 5px solid $orange;
+}

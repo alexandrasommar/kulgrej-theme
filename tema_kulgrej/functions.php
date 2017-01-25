@@ -1,5 +1,7 @@
 <?php
 
+require "widget-foodlist.php";
+
 // hooks
 add_action( 'after_setup_theme', 'fed16_blog_setup' );
 
@@ -11,7 +13,7 @@ function fed16_blog_setup () {
 
 	register_nav_menu( 'mainmenu', 'Website main navigation' );
 
-	add_theme_support( 'post-thumbnails', array( 'post', 'fed16_cpt_portfolio' ) );
+	add_theme_support( 'post-thumbnails', array( 'post', 'fed16_cpt_portfolio', 'page' ) );
 	add_image_size( 'blooper', 500, 500, array( 'left', 'top' ) );
 	//the_post_thumbnail('blooper');
 
