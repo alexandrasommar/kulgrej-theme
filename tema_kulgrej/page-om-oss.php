@@ -4,7 +4,7 @@ get_header();
 
 if (has_post_thumbnail()) { ?>
 	<section class="header-img" style="background-image:url(<?php echo the_post_thumbnail_url(); ?>);">
-		<h2 class="header-title">Om oss</h2>
+		<h1 class="header-title">Om oss</h1>
 	</section> <?php
 } ?>
 
@@ -14,13 +14,16 @@ if (has_post_thumbnail()) { ?>
 
 <?php
 if(have_posts()) {
-	while(have_posts()) {
-		the_post();
+	while(have_posts()) { ?>
+		<article class="about">
+			<?php
+			the_post();
 
-		?>
-		<div class="bodytext">
-			<?php the_content(); ?>
-		</div>
+			?>
+		</article>
+			<div class="bodytext">
+				<?php the_content(); ?>
+			</div>
 		<?php
 	}
 }

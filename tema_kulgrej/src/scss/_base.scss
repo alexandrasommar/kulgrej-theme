@@ -25,25 +25,26 @@ ul {
 *************************** */
 
 header {
-	text-transform: uppercase;
 	background-color: $brown;
 	color: $grey;
+	text-transform: uppercase;
 	@include orange-line;
 	nav {
 		display: flex;
 		justify-content: space-between;
+		width: 100%;
 		.left {
 
 		}
 		.right {
-			width: 400px;
-			justify-content: flex-end;
 			font-size: 14px;
+			justify-content: flex-end;
 			padding-right: 15px;
+			width: 400px;
 		}
 		.menu-menu-container ul {
-			justify-content: space-between;
 			display: flex;
+			justify-content: space-between;
 		}
 		.menu-item {
 			justify-content: space-between;
@@ -65,41 +66,42 @@ header {
 *************************** */
 
 .header-img {
-	display: flex;
-	justify-content: center;
-	background-size: cover;
-	width: 100%;
-	height: 100%;
 	background-attachment: fixed;
 	background-position: center center;
+	background-size: cover;
+	display: flex;
+	height: 100%;
+	justify-content: center;
 	padding: 50px;
+	max-width: 100%;
 }
 .header-title {
 	background-color: $brown;
-	padding: 20px;
 	color: $grey;
+	padding: 20px;
 	text-transform: uppercase;
 
 }
-
-
 
 /* ***************************
         MAIN CONTENT
 *************************** */
 
+.main-container {
+	margin: 20px;
+}
 
 /* ***************************
         FOOTER
 *************************** */
 
 footer {
-	display: flex;
-	flex-direction: column;
 	align-items: center;
 	background-color: $brown;
-	color: $grey;
 	box-sizing: border-box;
+	color: $grey;
+	display: flex;
+	flex-direction: column;
 	@include orange-line;
 	.footer-col-1 {
 		padding: 10px;
