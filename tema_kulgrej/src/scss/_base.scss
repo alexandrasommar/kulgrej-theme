@@ -60,6 +60,28 @@ header {
 	}
 }
 
+/* ***************************
+        HEADER IMG
+*************************** */
+
+.header-img {
+	display: flex;
+	justify-content: center;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+	background-attachment: fixed;
+	background-position: center center;
+	padding: 50px;
+}
+.header-title {
+	background-color: $brown;
+	padding: 20px;
+	color: $grey;
+	text-transform: uppercase;
+
+}
+
 
 
 /* ***************************
