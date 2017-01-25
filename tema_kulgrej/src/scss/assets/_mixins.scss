@@ -8,3 +8,48 @@ $a-menu-hover: 'a:active, a:hover';
 @mixin orange-line {
 	border-bottom: 5px solid $orange;
 }
+
+
+
+/* BROWSER PREFIX FOR FLEXBOX */
+@mixin flexbox() {
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
+    display: flex;
+}
+@mixin align-items($value) {
+    -moz-box-align: $value;
+    -ms-flex-align: $value;
+    -webkit-align-items: $value;
+    -webkit-box-align: $value;
+    align-items: $value;
+}
+@mixin flex-direction($direction) {
+    -ms-flex-direction: $direction;
+    -webkit-box-direction: $direction;
+    -webkit-flex-direction: $direction;
+    flex-direction: $direction;
+}
+@mixin flex($grow) {
+    -webkit-box-flex-grow: $grow;
+    -webkit-flex: $grow;
+    -ms-flex: $grow;
+    flex: $grow;
+}
+@mixin justify-content($value) {
+    -webkit-box-pack: $value;
+    -moz-box-pack: $value;
+    -ms-flex-pack: $value;
+    justify-content: $value;
+}
+// Flex Line Wrapping
+// - applies to: flex containers
+// nowrap | wrap | wrap-reverse
+@mixin flex-wrap($value) {
+    -webkit-box-flex-wrap: $value;
+    -webkit-flex-wrap: $value;
+    -ms-flex-wrap: $value;
+    flex-wrap: $value;
+}

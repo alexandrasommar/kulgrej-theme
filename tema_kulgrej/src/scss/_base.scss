@@ -30,24 +30,24 @@ header {
 	text-transform: uppercase;
 	@include orange-line;
 	nav {
-		display: flex;
-		justify-content: space-between;
 		width: 100%;
+		@include flexbox;
+		@include flex-direction(space-between);
 		.left {
 
 		}
 		.right {
 			font-size: 14px;
-			justify-content: flex-end;
+			@include flex-direction(flex-end);
 			padding-right: 15px;
 			width: 400px;
 		}
 		.menu-menu-container ul {
-			display: flex;
-			justify-content: space-between;
+			@include flexbox;
+			@include flex-direction(space-between);
 		}
 		.menu-item {
-			justify-content: space-between;
+			@include flex-direction(space-between);
 		}
 
 	}
@@ -69,11 +69,11 @@ header {
 	background-attachment: fixed;
 	background-position: center center;
 	background-size: cover;
-	display: flex;
 	height: 100%;
-	justify-content: center;
 	padding: 50px;
 	max-width: 100%;
+	@include flexbox;
+	@include flex-direction(center);
 }
 .header-title {
 	background-color: $brown;
@@ -100,8 +100,8 @@ footer {
 	background-color: $brown;
 	box-sizing: border-box;
 	color: $grey;
-	display: flex;
-	flex-direction: column;
+	@include flexbox;
+	@include flex-direction(column);
 	@include orange-line;
 	.footer-col-1 {
 		padding: 10px;
