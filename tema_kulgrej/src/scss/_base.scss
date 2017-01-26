@@ -117,6 +117,9 @@ header {
 	justify-content: center;
 	.header-bg {
 		background: rgba(239, 155, 40, 0.7);
+		margin: 0 auto;
+		width: 50%;
+		text-align: center;
 		z-index: 1;
 	}
 	.index-title {
@@ -129,11 +132,16 @@ header {
 *************************** */
 
 .turning-words {
+	margin: 0 auto;
+	width: 20%;
 
 	/*Sentence*/
 	.sentence{
-	     color: #222;
+	     color: $grey;
 	     font-size: 40px;
+		 font-weight: 400;
+		 text-shadow: 0.5px 0.5px 0.5px #261C16;
+
 	}
 
 	/*Vertical Sliding*/
@@ -145,7 +153,7 @@ header {
 		animation: topToBottom 10s linear infinite 0s;
 		-ms-animation: topToBottom 10s linear infinite 0s;
 		-webkit-animation: topToBottom 10s linear infinite 0s;
-		color: #F19C08;
+		color: $orange;
 		opacity: 0;
 		overflow: hidden;
 		position: absolute;
