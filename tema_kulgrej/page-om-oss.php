@@ -15,16 +15,16 @@ if (has_post_thumbnail()) { ?>
 
 
 <?php
-if(have_posts()) {
-	while(have_posts()) { ?>
+if(have_posts()) { ?>
 		<article class="about">
-			<?php the_post(); ?>
+			<?php the_field('left'); ?>
+
 		</article>
 			<div class="bodytext">
-				<?php the_content(); ?>
+				<?php the_field('right'); ?>
 			</div>
 		<?php
-	}
+
 }
 
 ?>
