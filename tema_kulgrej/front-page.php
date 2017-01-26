@@ -16,8 +16,8 @@ if (has_post_thumbnail()) { ?>
 			</h1>
 		</div>
 		<div class="turning-words">
-			<h2 class="sentence">Vi gör
-			    <div class="slidingVertical">
+			<h2 class="sentence">Vi gör <br>
+			    <div class="tw">
 					<span>montrar</span>
 					<span>event</span>
 					<span>scenografi</span>

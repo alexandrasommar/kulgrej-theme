@@ -2,3 +2,10 @@
 @import "assets/_colors";
 @import "assets/mixins";
 @import "base";
+
+@media screen and (min-width:736px) {
+	@import "_tablet";
+	}
+@media screen and (min-width:1366px) {
+	@import "_desktop";
+}
