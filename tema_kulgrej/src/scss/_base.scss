@@ -1,5 +1,5 @@
 /* ***************************
-        BASE
+		BASE
 *************************** */
 @import "assets/mixins";
 
@@ -8,20 +8,24 @@
 	font-size: 16px;
 	font-size: 1.6em;
 }
+
 #{$a-tags} {
-  color: $blue;
-  text-decoration: none;
+	color: $blue;
+	text-decoration: none;
 }
 #{$a-tags-hover} {
-  font-weight: bold;
+	font-weight: bold;
 }
 ul {
 	list-style: none;
 	padding: 0;
 }
+h1, h2 {
+	font-weight: 400;
+}
 
 /* ***************************
-        HEADER
+		HEADER
 *************************** */
 
 header {
@@ -32,37 +36,37 @@ header {
 	nav {
 		width: 100%;
 		@include flexbox;
-		@include flex-direction(space-between);
+		@include justify-content(space-between);
 		.left {
 
 		}
 		.right {
 			font-size: 14px;
-			@include flex-direction(flex-end);
+			@include justify-content(flex-end);
 			padding-right: 15px;
 			width: 400px;
 		}
 		.menu-menu-container ul {
 			@include flexbox;
-			@include flex-direction(space-between);
+			@include justify-content(space-between);
 		}
 		.menu-item {
-			@include flex-direction(space-between);
+			@include justify-content(space-between);
 		}
 
 	}
 	#{$a-menu} {
-	  color: $grey;
-	  text-decoration: none;
+		color: $grey;
+		text-decoration: none;
 	}
 	#{$a-menu-hover} {
-	  color: $orange;
-	  font-weight: normal;
+		color: $orange;
+		font-weight: normal;
 	}
 }
 
 /* ***************************
-        HEADER IMG
+		HEADER IMG
 *************************** */
 
 .header-img {
@@ -73,18 +77,20 @@ header {
 	padding: 50px;
 	max-width: 100%;
 	@include flexbox;
-	@include flex-direction(center);
-}
-.header-title {
-	background-color: $brown;
-	color: $grey;
-	padding: 20px;
-	text-transform: uppercase;
-
+	@include justify-content(center);
+	div {
+		background-color: $brown;
+		opacity: 0.7;
+		padding: 10px 30px 0;
+		text-transform: uppercase;
+		.header-title {
+			color: $grey;
+		}
+	}
 }
 
 /* ***************************
-        MAIN CONTENT
+		MAIN CONTENT
 *************************** */
 
 .main-container {
@@ -92,7 +98,7 @@ header {
 }
 
 /* ***************************
-        FOOTER
+		FOOTER
 *************************** */
 
 footer {
