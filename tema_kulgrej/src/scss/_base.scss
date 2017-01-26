@@ -124,7 +124,10 @@ header {
 	}
 	.index-title {
 		z-index: 2;
+		img {
+			max-width: 100%;
 		}
+	}
 }
 
 /* ***************************
