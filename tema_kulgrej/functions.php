@@ -14,6 +14,7 @@ function fed16_blog_setup () {
 	register_nav_menu( 'mainmenu', 'Website main navigation' );
 
 	add_theme_support( 'post-thumbnails', array( 'post', 'fed16_cpt_portfolio', 'page' ) );
+	add_theme_support( 'post-thumbnails', array( 'post', 'kundcase_cpt_kulgrej', 'page' ) );
 	add_image_size( 'blooper', 500, 500, array( 'left', 'top' ) );
 	//the_post_thumbnail('blooper');
 
