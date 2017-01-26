@@ -9,7 +9,10 @@
 <header>
 	<nav>
 		<div class="left">
-
+		<?php
+		if ( function_exists( 'the_custom_logo' ) ) {
+		    the_custom_logo();
+		} ?>
 		</div>
 		<div class="right">
 			<?php wp_nav_menu(array('theme_location' => 'mainmenu')); ?>

@@ -19,8 +19,8 @@ function fed16_blog_setup () {
 
 	// Custom logo
 	add_theme_support( 'custom-logo', array(
-		'width'			=> 600,
-		'height'		=> 85,
+		'width'			=> 300,
+		'height'		=> 150,
 		'flex-width'	=> true,
 		'flex-height'	=> true
 		) );
