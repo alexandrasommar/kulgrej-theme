@@ -8,6 +8,9 @@
 	font-size: 16px;
 	font-size: 1.6em;
 }
+body {
+	background-color: $grey;
+}
 
 #{$a-tags} {
 	color: $blue;
@@ -227,6 +230,7 @@ footer {
 	background-color: $brown;
 	box-sizing: border-box;
 	color: $grey;
+	font-size: 14px;
 	@include flexbox;
 	@include flex-direction(column);
 	@include orange-line;

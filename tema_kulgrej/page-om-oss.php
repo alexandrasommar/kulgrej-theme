@@ -4,7 +4,7 @@ get_header();
 
 if (has_post_thumbnail()) { ?>
 	<section class="header-img" style="background-image:url(<?php echo the_post_thumbnail_url(); ?>);">
-		<div>
+		<div class="header-bg">
 			<h1 class="header-title"><?php the_title(); ?></h1>
 		</div>
 	</section> <?php
