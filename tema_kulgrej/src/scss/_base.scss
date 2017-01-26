@@ -110,8 +110,7 @@ header {
 .index-img {
 	@extend .header-img;
 	background-attachment: initial;
-	padding: 0;
-	height: 500px;
+	padding: 20%;
 	flex-direction: column;
 	justify-content: center;
 	.header-bg {
