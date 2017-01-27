@@ -12,9 +12,9 @@ if (has_post_thumbnail()) { ?>
 	</section> <?php
 } ?>
 
-<main class="main-container flex">
+<main class="main-container flex contact">
 
-<h1><?php the_title(); ?></h1>
+<h1 class="contact-title"><?php the_title(); ?></h1>
 
 <?php
 if ( have_posts() ) {
