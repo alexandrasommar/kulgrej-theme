@@ -48,3 +48,15 @@
 	}
 
 }
+
+/* ***************************
+		FOOTER
+*************************** */
+
+footer {
+	@include flex-direction(row);
+	@include justify-content(space-around);
+	.footer-col-3 {
+		order: 3;
+	}
+}

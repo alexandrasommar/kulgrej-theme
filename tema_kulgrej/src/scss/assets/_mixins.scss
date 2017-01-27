@@ -10,7 +10,6 @@ $a-menu-hover: 'a:active, a:hover';
 }
 
 
-
 /* BROWSER PREFIX FOR FLEXBOX */
 
 @mixin flexbox() {
@@ -61,7 +60,6 @@ $a-menu-hover: 'a:active, a:hover';
 	-ms-animation: $value;
 	-webkit-animation: $value;
 }
-
 @mixin animation-delay($s) {
 	animation-delay: $s;
 	-ms-animation-delay: $s;
