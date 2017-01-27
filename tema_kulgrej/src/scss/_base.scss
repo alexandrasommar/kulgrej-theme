@@ -10,6 +10,7 @@
 }
 body {
 	background-color: $grey;
+	color: $brown;
 }
 
 #{$a-tags} {
@@ -217,9 +218,29 @@ header {
 	max-width: 100%;
 	.wpcf7-form-control {
 		max-width: 100%;
+		font-family: 'Josefin Sans', sans-serif;
 	}
 }
 
+::-webkit-input-placeholder {
+	font-size: 15px;
+	padding: 5px;
+}
+
+:-moz-placeholder {
+	font-size: 15px;
+	padding: 5px;
+}
+
+::-moz-placeholder {
+	font-size: 15px;
+	padding: 5px;
+}
+
+:-ms-input-placeholder {
+	font-size: 15px;
+	padding: 5px;
+}
 
 /* ***************************
 		FOOTER
