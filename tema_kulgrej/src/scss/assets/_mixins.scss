@@ -4,7 +4,6 @@ $a-tags-hover: 'a:active, a:hover';
 $a-menu: 'a, a:active, a:hover, a:visited';
 $a-menu-hover: 'a:active, a:hover';
 
-
 @mixin orange-line {
 	border-bottom: 5px solid $orange;
 }
@@ -12,6 +11,7 @@ $a-menu-hover: 'a:active, a:hover';
 
 
 /* BROWSER PREFIX FOR FLEXBOX */
+
 @mixin flexbox() {
     display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
     display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
@@ -54,4 +54,25 @@ $a-menu-hover: 'a:active, a:hover';
     flex-wrap: $value;
 }
 
-/* ANIMATIONS */
+/* BROWSER PREFIX FOR ANIMATIONS */
+
+@mixin animation($value) {
+	-webkit-animation: $value;
+	-ms-animation: $value;
+}
+
+@mixin animation-delay($s) {
+	animation-delay: $s;
+	-webkit-animation-delay: $s;
+	-ms-animation-delay: $s;
+}
+@mixin translateX($value) {
+	-moz-transform: translateX($value);
+	-webkit-transform: translateX($value);
+	-ms-transform: translateX($value);
+}
+@mixin translateY($value) {
+	-moz-transform: translateY($value);
+	-webkit-transform: translateY($value);
+	-ms-transform: translateY($value);
+}
