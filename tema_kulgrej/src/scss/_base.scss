@@ -111,6 +111,7 @@ header {
 .index-img {
 	@extend .header-img;
 	background-attachment: initial;
+	background-color: $brown;
 	flex-direction: column;
 	justify-content: center;
 	padding: 20%;
@@ -170,7 +171,7 @@ header {
 	}
 
 	/*leftToRight Animation*/
-	@-moz-keyframes leftToRight{
+	@keyframes leftToRight{
 		0% { opacity: 0; }
 		5% { opacity: 0; @include translateX(-50px); }
 		10% { opacity: 1; @include translateX(0px); }

@@ -37,7 +37,7 @@
 	}
 
 	/*topToBottom Animation*/
-	@-moz-keyframes topToBottom{
+	@keyframes topToBottom{
 		0% { opacity: 0; }
 		5% { opacity: 0; @include translateY(-50px); }
 		10% { opacity: 1; @include translateY(0px); }
@@ -46,4 +46,5 @@
 		80% { opacity: 0; }
 		100% { opacity: 0; }
 	}
+
 }
