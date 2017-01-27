@@ -36,8 +36,4 @@ if (has_post_thumbnail()) { ?>
 </main> <!-- /main-container -->
 
 
-
-<?php get_footer();
-
-
- ?>
+<?php get_footer(); ?>
