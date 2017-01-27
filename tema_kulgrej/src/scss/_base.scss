@@ -25,6 +25,11 @@ ul {
 }
 h1, h2 {
 	font-weight: 400;
+	text-transform: uppercase;
+}
+.flex {
+	@include flexbox;
+	@include flex-direction(column);
 }
 
 /* ***************************
@@ -34,8 +39,8 @@ h1, h2 {
 header {
 	background-color: $brown;
 	color: $grey;
-	text-transform: uppercase;
 	height: 3.5em;
+	text-transform: uppercase;
 	@include orange-line;
 	nav {
 		width: 100%;
@@ -97,7 +102,6 @@ header {
 	.header-bg {
 		background: rgba(38, 28, 22, 0.7);
 		padding: 10px 30px 0;
-		text-transform: uppercase;
 		.header-title {
 			color: $grey;
 		}
@@ -203,6 +207,17 @@ header {
 
 #wdi_feed_0 .wdi_photo_wrap_inner {
 	padding: 30px;
+}
+
+/* ***************************
+		CONTACT PAGE
+*************************** */
+
+.wpcf7 {
+	max-width: 100%;
+	.wpcf7-form-control {
+		max-width: 100%;
+	}
 }
 
 
