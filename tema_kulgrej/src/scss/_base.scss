@@ -32,7 +32,7 @@ h1, h2 {
 	@include flexbox;
 	@include flex-direction(column);
 	@include justify-content(center);
-	width: 100%;
+	max-width: 100%;
 }
 .fixed {
 	background-attachment: fixed;
@@ -219,7 +219,6 @@ header {
 *************************** */
 .about-us {
 	padding-top: 40px;
-	max-width: 800px;
 }
 
 .contact-info {
