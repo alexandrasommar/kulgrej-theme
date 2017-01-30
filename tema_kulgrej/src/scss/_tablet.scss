@@ -52,7 +52,14 @@
 		ABOUT PAGE
 *************************** */
 .about-us {
-	max-width: 80%;
+	.about-text {
+		width: 80%;
+	}
+}
+
+.contact-info {
+	@include flex-direction(row);
+	@include justify-content(space-around);
 }
 
 

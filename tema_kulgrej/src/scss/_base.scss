@@ -218,12 +218,23 @@ header {
 		ABOUT PAGE
 *************************** */
 .about-us {
+	max-height: 100%;
 	padding-top: 40px;
+	@include flexbox;
+	@include justify-content(center);
+	.about-text {
+		height: 80%;
+		width: 100%;
+	}
 }
 
 .contact-info {
+	max-height: 100%;
 	padding-bottom: 40px;
+	@include flexbox;
+	@include flex-direction(column);
 	.about {
+		height: 80%;
 		padding-top: 30px;
 	}
 }

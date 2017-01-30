@@ -10,15 +10,17 @@ if (has_post_thumbnail()) { ?>
 	</section> <?php
 } ?>
 
-<main class="main-container flex">
+<main class="main-container">
 
 <section class="about-us">
 	<?php
 	if( have_posts() ) {
-		while( have_posts() ) {
+		while( have_posts() ) { ?>
+		<article class="about-text"> <?php
 			the_post();
 			the_content();
 		} ?>
+		</article>
 </section>
 
 
