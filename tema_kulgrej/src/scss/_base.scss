@@ -164,20 +164,18 @@ header {
 		opacity: 0;
 		overflow: hidden;
 		position: absolute;
-		@include animation(leftToRight 12s linear infinite 0s);
+		@include animation(leftToRight 10s linear infinite 0s);
 	}
 	.tw span:nth-child(2){
-		@include animation-delay(3s);
+		@include animation-delay(2.5s);
 	}
 	.tw span:nth-child(3){
-		@include animation-delay(6s);
+		@include animation-delay(5s);
 	}
 	.tw span:nth-child(4){
-		@include animation-delay(9s);
+		@include animation-delay(7.5s);
 	}
-	.tw span:nth-child(5){
-		@include animation-delay(12s);
-	}
+
 
 	/*leftToRight Animation*/
 	@keyframes leftToRight{
@@ -218,23 +216,12 @@ header {
 		ABOUT PAGE
 *************************** */
 .about-us {
-	max-height: 100%;
 	padding-top: 40px;
-	@include flexbox;
-	@include justify-content(center);
-	.about-text {
-		height: 80%;
-		width: 100%;
-	}
 }
 
 .contact-info {
-	max-height: 100%;
 	padding-bottom: 40px;
-	@include flexbox;
-	@include flex-direction(column);
 	.about {
-		height: 80%;
 		padding-top: 30px;
 	}
 }

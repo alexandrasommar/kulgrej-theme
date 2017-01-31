@@ -22,6 +22,11 @@ if (has_post_thumbnail()) { ?>
 					<span>event</span>
 					<span>scenografi</span>
 					<span>speciallösningar</span>
+					<span>specialsnickerier</span>
+					<!-- <span>popup store</span>
+					<span>kickoffer</span>
+					<span>produktlanseringar</span>
+					<span>upplevelser</span> -->
 			    </div>
 	  		</h2>
   		</div>

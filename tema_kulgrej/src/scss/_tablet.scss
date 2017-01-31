@@ -19,13 +19,15 @@
 		text-indent: 8px;
 	}
 	.tw span{
-		@include animation(topToBottom 10s linear infinite 0s);
+		@include animation(topToBottom 12.5s linear infinite 0s);
 		color: $orange;
 		opacity: 0;
 		overflow: hidden;
 		position: absolute;
 	}
-
+	.tw span:nth-child(1){
+		@include animation-delay(0s);
+	}
 	.tw span:nth-child(2){
 		@include animation-delay(2.5s);
 	}
@@ -35,6 +37,24 @@
 	.tw span:nth-child(4){
 		@include animation-delay(7.5s);
 	}
+	.tw span:nth-child(5){
+		@include animation-delay(10s);
+	}
+	.tw span:nth-child(6){
+		@include animation-delay(12.5s);
+	}/*
+	.tw span:nth-child(7){
+		@include animation-delay(15s);
+	}
+	.tw span:nth-child(8){
+		@include animation-delay(17.5s);
+	}
+	.tw span:nth-child(9){
+		@include animation-delay(20s);
+	}
+	.tw span:nth-child(10){
+		@include animation-delay(22.5s);
+	} */
 
 	/*topToBottom Animation*/
 	@keyframes topToBottom{

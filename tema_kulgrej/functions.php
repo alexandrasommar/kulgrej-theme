@@ -1,6 +1,32 @@
 <?php
 
 require "widget-foodlist.php";
+require "theme_settings.php"; // lektionsgrejs
+
+add_action( "wp_dashboard_setup", "fed16_remove_dashboard_boxes" );
+function fed16_remove_dashboard_boxes() {
+	global $wp_meta_boxes;
+	unset( $wp_meta_boxes["dashboard"]["side"]["core"]["dashboard_quick_press"] );
+	unset($wp_meta_boxes["dashboard"]["normal"]["core"]["dashboard_right_now"] ); // tar bort i "i korthet"
+	unset($wp_meta_boxes["dashboard"]["side"]["core"]["dashboard_primary"] ); // tar bort nyheter från wp
+
+	wp_add_dashboard_widget( "fed16dashboard", "Support", "fed16_dashwidget" );
+}
+
+function fed16_dashwidget() {
+	?>
+	Har du ett problem?<br>
+	Ring 070 123 456 78
+	<?php
+}
+
+remove_action( "wp_head", "print_emoji_detection_script", 7 );
+remove_action( "wp_print_styles", "print_emoji_styles" );
+remove_action( "wp_head", "feed_links", 2);
+
+
+//}
+
 
 // hooks
 add_action( 'after_setup_theme', 'fed16_blog_setup' );
