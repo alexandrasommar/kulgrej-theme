@@ -16,14 +16,14 @@ class SocialMediaLinks extends WP_Widget {
 		//$name = $this->get_field_name( "title" ); ?>
 		<p>
 			<label for="<?php echo $id ?>">Facebook url: </label>
-			<input type="number"
+			<input type="text"
 				id="<?php echo $id; ?>"
 				name="<?php echo $name; ?>"
 				value="<?php echo $title; ?>">
 		</p>
 		<p>
 			<label for="<?php echo $id ?>">Instagram url: </label>
-			<input type="number"
+			<input type="text"
 				id="<?php echo $id; ?>"
 				name="<?php echo $name; ?>"
 				value="<?php echo $title; ?>">
@@ -38,6 +38,7 @@ class SocialMediaLinks extends WP_Widget {
 		}
 		return $instance;
 	}
+
 	// Visa widget i frontend
 	public function widget( $args, $instance ) {
 		echo $args[ "before_widget"];

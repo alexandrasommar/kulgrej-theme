@@ -1,6 +1,6 @@
 <?php
 
-require "widget-foodlist.php";
+require "widget_social.php";
 require "theme_settings.php"; // lektionsgrejs
 
 add_action( "wp_dashboard_setup", "fed16_remove_dashboard_boxes" );
@@ -24,8 +24,6 @@ remove_action( "wp_head", "print_emoji_detection_script", 7 );
 remove_action( "wp_print_styles", "print_emoji_styles" );
 remove_action( "wp_head", "feed_links", 2);
 
-
-//}
 
 
 // hooks

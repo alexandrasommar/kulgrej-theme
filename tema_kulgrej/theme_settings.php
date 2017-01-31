@@ -16,7 +16,7 @@ function setup_theme_admin_menus() {
 
 }
 
-function fed16_settings_page() { ?>
+function kulgrej_settings_page() { ?>
 
 	<div class="wrap">
 		<h1><?php _e( "Theme settings", "fed16" ); ?></h1>

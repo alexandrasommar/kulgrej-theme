@@ -5,12 +5,10 @@
 **/
 
 get_header();
+?>
 
-
-if (has_post_thumbnail()) { ?>
-	<section class="header-img" style="background-image:url(<?php echo the_post_thumbnail_url(); ?>);">
-	</section> <?php
-} ?>
+<section class="header-img map" style="background-image:url(<?php echo the_post_thumbnail_url(); ?>);">
+</section>
 
 <main class="main-container flex contact">
 
