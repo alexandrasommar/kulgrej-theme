@@ -12,19 +12,17 @@ get_header();
 
 <main class="main-container flex contact">
 
-<h1 class="contact-title"><?php the_title(); ?></h1>
+	<h1 class="contact-title"><?php the_title(); ?></h1>
 
-<?php
-if ( have_posts() ) {
+	<?php
+	if ( have_posts() ) {
 
-	while ( have_posts() ) {
-		the_post();
-		the_content();
-	}
+		while ( have_posts() ) {
+			the_post();
+			the_content();
+		}
 
-} ?>
-
-
+	} ?>
 
 </main> <!-- /main-container -->
 
