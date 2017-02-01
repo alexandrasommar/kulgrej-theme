@@ -11,40 +11,59 @@ class SocialMediaLinks extends WP_Widget {
 	}
 	// Admin-formuläret under Appearance -> Widgets för denna widget
 	public function form( $instance ) {
-		//$title = $instance["title"];
-		$id = esc_attr( $this->get_field_id( 'title' ) );
-		//$name = $this->get_field_name( "title" ); ?>
+		$faceurl = $instance["facebook"];
+		$faceid = esc_attr( $this->get_field_id( "facebook" ) );
+		$facename = $this->get_field_name( "facebook" );
+
+		$instaurl = $instance["instagram"];
+		$instaid = esc_attr( $this->get_field_id( "instagram" ) );
+		$instaname = $this->get_field_name( "instagram" ); ?>
 		<p>
-			<label for="<?php echo $id ?>">Facebook url: </label>
+			<label for="<?php echo $faceid ?>">Facebook url: </label>
 			<input type="text"
-				id="<?php echo $id; ?>"
-				name="<?php echo $name; ?>"
-				value="<?php echo $title; ?>">
+				id="<?php echo $faceid; ?>"
+				name="<?php echo $facename; ?>"
+				value="<?php echo $faceurl; ?>"
+				placeholder="Lägg in hela url:en med http"
+				class="widefat">
 		</p>
 		<p>
-			<label for="<?php echo $id ?>">Instagram url: </label>
+			<label for="<?php echo $instaid ?>">Instagram url: </label><br>
 			<input type="text"
-				id="<?php echo $id; ?>"
-				name="<?php echo $name; ?>"
-				value="<?php echo $title; ?>">
+				id="<?php echo $instaid; ?>"
+				name="<?php echo $instaname; ?>"
+				value="<?php echo $instaurl; ?>"
+				placeholder="Lägg in hela url:en med http"
+				class="widefat">
 		</p> <?php
 
 	}
 
 	public function update( $new_instance, $old_instance ) {
 		$instance = array();
-		if( !empty( $new_instance[ "title" ] ) ) {
-			$instance[ "title" ] = $new_instance[ "title" ];
+		if( !empty( $new_instance["facebook"] ) ) {
+				$instance["facebook"] = $new_instance["facebook"];
+			}
+
+		if ( !empty( $new_instance["instagram"] ) ) {
+			$instance["instagram"] = $new_instance["instagram"];
 		}
 		return $instance;
 	}
-
 	// Visa widget i frontend
 	public function widget( $args, $instance ) {
+
+		extract( $args );
+		$faceurl = $instance["facebook"];
+		$instaurl = $instance["instagram"];
+
 		echo $args[ "before_widget"];
-		echo $args[ "before_title"];
-		echo $instance[ "title"];
-		echo $args[ "after_title"];
+		echo "<a href='$faceurl' target='_blank'>";
+		echo "<i class='fa fa-facebook-square fa-3x' aria-hidden='true'></i>";
+		echo "</a>";
+		echo "<a href='$instaurl' target='_blank'>";
+		echo "<i class='fa fa-instagram fa-3x' aria-hidden='true'></i>";
+		echo "</a>";
 		echo $args[ "after_widget"];
 	}
 }
