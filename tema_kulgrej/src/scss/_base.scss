@@ -214,8 +214,8 @@ header {
 
 .wdi_feed_main_container {
 	box-sizing: border-box;
-	padding: 50px;
 	max-width: 100%;
+	padding: 50px;
 }
 
 #wdi_feed_0 .wdi_photo_wrap_inner {
@@ -255,9 +255,9 @@ header {
 .wpcf7 {
 	max-width: 100%;
 	.wpcf7-form-control {
-		max-width: 100%;
-		font-family: 'Josefin Sans', sans-serif;
 		border: 1px solid $blue;
+		font-family: 'Josefin Sans', sans-serif;
+		max-width: 100%;
 	}
 	.wpcf7-submit {
 		background-color: $blue;
@@ -266,8 +266,8 @@ header {
 		width: 100%;
 	}
 	.wpcf7-textarea {
-		padding: 0;
 		box-sizing: border-box;
+		padding: 0;
 	}
 }
 
@@ -305,6 +305,8 @@ footer {
 	box-sizing: border-box;
 	color: $lightgrey;
 	font-size: 14px;
+	font-size: 1.4em;
+	padding: 20px 0;
 	@include flexbox;
 	@include flex-direction(column);
 	@include orange-line;
@@ -328,10 +330,10 @@ footer {
 *************************** */
 
 .not-found {
-	background-image: url("http://kulgrej.se/wordpress/wp-content/uploads/2017/02/notfound.jpg");
-	background-size: cover;
 	background-color: $brown;
+	background-image: url("http://kulgrej.se/wordpress/wp-content/uploads/2017/02/notfound.jpg");
 	background-position: center center;
+	background-size: cover;
 	padding: 100px 0 200px;
 	text-align: center;
 	.not-found-text {
