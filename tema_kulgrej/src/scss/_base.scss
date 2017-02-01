@@ -312,3 +312,19 @@ footer {
 		}
 	}
 }
+
+/* ***************************
+		NOT FOUND
+*************************** */
+
+.not-found {
+	background-image: url("http://localhost:8888/wordpress/wp-content/uploads/2017/02/notfound.jpg");
+	background-size: cover;
+	background-color: $brown;
+	background-position: center center;
+	padding: 100px 0 200px;
+	text-align: center;
+	.not-found-text {
+		color: $lightgrey;
+	}
+}
