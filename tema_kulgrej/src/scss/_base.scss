@@ -5,12 +5,14 @@
 
 :root {
 	font-family: 'Josefin Sans', sans-serif;
-	font-size: 16px;
-	font-size: 1.6em;
+
+	font-size: 62.5%;
 }
 body {
 	background-color: $lightgrey;
 	color: $brown;
+	font-size: 16px;
+	font-size: 1.6em;
 }
 
 #{$a-tags} {
@@ -27,6 +29,15 @@ ul {
 h1, h2 {
 	font-weight: 400;
 	text-transform: uppercase;
+}
+h1 {
+	font-size: 30px;
+	font-size: 3em;
+}
+
+h3 {
+	font-size: 20px;
+	font-size: 2.0em;
 }
 .flex {
 	@include flexbox;
@@ -45,7 +56,6 @@ h1, h2 {
 header {
 	background-color: $brown;
 	color: $lightgrey;
-	height: 3.5em;
 	text-transform: uppercase;
 	@include orange-line;
 	nav {
@@ -326,5 +336,34 @@ footer {
 	text-align: center;
 	.not-found-text {
 		color: $lightgrey;
+	}
+}
+
+/* ***************************
+		SEARCH
+*************************** */
+
+.search {
+	.search-img {
+		background-image: url("http://kulgrej.se/wordpress/wp-content/uploads/2017/02/searchimage.jpg");
+	}
+	a {
+		color: $brown;
+		&:hover {
+			color: $blue;
+		}
+	}
+
+
+}
+.search-result {
+	text-transform: none;
+
+}
+
+.list-result {
+	a:hover {
+		font-weight: normal;
+
 	}
 }
