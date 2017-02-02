@@ -19,12 +19,12 @@ if (has_post_thumbnail()) { ?>
 			<h2 class="sentence">Vi gör <br>
 			    <div class="tw">
 					<span>montrar</span>
+					<span>speciallösningar</span>
 					<span>event</span>
 					<span>scenografi</span>
-					<span>speciallösningar</span>
+					<span>kickoffer</span>
 					<span>specialsnickerier</span>
 					<span>popup store</span>
-					<span>kickoffer</span>
 					<span>produktlanseringar</span>
 					<span>upplevelser</span>
 			    </div>
