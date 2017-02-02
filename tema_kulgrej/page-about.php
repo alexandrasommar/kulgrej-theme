@@ -1,4 +1,8 @@
 <?php
+/**
+* Template Name: Om oss
+* Visar sidan Om oss
+**/
 
 get_header();
 

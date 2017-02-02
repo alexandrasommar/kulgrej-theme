@@ -10,10 +10,10 @@ function fed16_remove_dashboard_boxes() {
 	unset($wp_meta_boxes["dashboard"]["normal"]["core"]["dashboard_right_now"] ); // tar bort i "i korthet"
 	unset($wp_meta_boxes["dashboard"]["side"]["core"]["dashboard_primary"] ); // tar bort nyheter från wp
 
-	wp_add_dashboard_widget( "fed16dashboard", "Support", "fed16_dashwidget" );
+	wp_add_dashboard_widget( "kulgrejdashboard", "Support", "kulgrej_dashwidget" );
 }
 
-function fed16_dashwidget() {
+function kulgrej_dashwidget() {
 	?>
 	Har du ett problem?<br>
 	Ring 070 123 456 78
@@ -37,8 +37,7 @@ function fed16_blog_setup () {
 
 	register_nav_menu( 'mainmenu', 'Website main navigation' );
 
-	add_theme_support( 'post-thumbnails', array( 'post', 'fed16_cpt_portfolio', 'page' ) );
-	add_theme_support( 'post-thumbnails', array( 'post', 'kundcase_cpt_kulgrej', 'page' ) );
+	add_theme_support( 'post-thumbnails', array( 'post', 'kundcase_cpt_kulgrej', 'citat_cpt_kulgrej', 'page' ) );
 	add_image_size( 'blooper', 500, 500, array( 'left', 'top' ) );
 	//the_post_thumbnail('blooper');
 
