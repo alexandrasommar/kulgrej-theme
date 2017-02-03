@@ -16,11 +16,10 @@ if (has_post_thumbnail()) { ?>
 
 	<main class="main-container"><?php
 
+		//query to display all quote posts
 		$quotes = new WP_Query( array(
 			"post_type"		=> "citat_cpt_kulgrej",
-			"post_status"	=> "publish",
-			"orderby"		=> "title",
-			"order"			=> ASC
+			"post_status"	=> "publish"
 			) ); ?>
 
 
@@ -30,25 +29,39 @@ if (has_post_thumbnail()) { ?>
 
 				while( $quotes->have_posts() ) { ?>
 
-			<article class="quote"> <?php
-				$name = get_post_meta( get_the_ID(), 'name', true );
-				$title = get_post_meta( get_the_ID(), 'title', true );
-				$company = get_post_meta( get_the_ID(), 'company', true );
+				<article class="quote-text"><?php
+					$quotes->the_post();
 
-				$quotes->the_post();
+					//gets the metabox field values
+					$name = get_post_meta( get_the_ID(), 'name', true );
+					$title = get_post_meta( get_the_ID(), 'title', true );
+					$company = get_post_meta( get_the_ID(), 'company', true );
 
-				the_content();
+					//get the quote
+					the_content(); ?>
 
-				echo $name;
-				echo $title;
-				echo $company;
+					<p class="quoter"><?php
+						if( !empty( $name ) ) {
+							echo $name;
+						} ?>
+					</p>
 
-				} ?>
-			</article> <?php
+					<p><?php
+						if( !empty( $title ) ) {
+							echo $title . ", ";
+						}
 
+						if( !empty( $company ) ) {
+							echo $company;
+						}
+					?>
+					</p>
+				</article> <?php
 
+				}
+				wp_reset_postdata();
 			} else {
-				"Det finns inga projekt upplagda";
+				"Det finns inga kundcitat publicerade";
 			} ?>
 		</section>
 

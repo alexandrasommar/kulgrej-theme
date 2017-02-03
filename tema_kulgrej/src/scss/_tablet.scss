@@ -89,6 +89,21 @@
 	@include justify-content(space-around);
 }
 
+/* ***************************
+		QUOTES PAGE
+*************************** */
+
+.quote-container {
+	@include flex-direction(row);
+	flex-wrap: wrap;
+	@include justify-content(space-around);
+
+	.quote-text {
+		width: 60%;
+	}
+
+}
+
 
 /* ***************************
 		CONTACT PAGE
