@@ -78,7 +78,7 @@ header {
 			font-size: 14px;
 			@include justify-content(flex-end);
 			padding-right: 20px;
-			width: 400px;
+			width: 480px;
 		}
 
 		.menu-menu-container ul {
@@ -111,7 +111,7 @@ header {
 	background-size: cover;
 	height: 100%;
 	max-width: 100%;
-	padding: 50px;
+	padding: 60px 0 60px;
 	@include flexbox;
 	@include justify-content(center);
 	.header-bg {
