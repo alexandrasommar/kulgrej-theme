@@ -14,7 +14,7 @@ if (has_post_thumbnail()) { ?>
 	</section> <?php
 } ?>
 
-<main class="main-container">
+<main class="main-container flex">
 
 <section class="about-us">
 	<?php
