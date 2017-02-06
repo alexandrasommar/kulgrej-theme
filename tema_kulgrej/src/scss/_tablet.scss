@@ -87,7 +87,10 @@
 
 .contact-info {
 	@include flex-direction(row);
-	@include justify-content(space-around);
+	@include justify-content(space-between);
+	margin: auto;
+	width: 60%;
+
 }
 
 /* ***************************
