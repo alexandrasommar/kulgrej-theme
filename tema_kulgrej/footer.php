@@ -4,8 +4,10 @@
 
 <?php
 dynamic_sidebar( 'footer1' );
-dynamic_sidebar( 'footer2' );
+echo "&copy;" . date('o') . " KULGREJ";
 dynamic_sidebar( 'footer3' );
+
+
 
 
 
