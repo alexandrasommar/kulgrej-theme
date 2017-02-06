@@ -16,14 +16,14 @@ function setup_theme_admin_menus() {
 
 }
 
-function kulgrej_settings_page() { ?>
+function fed16_settings_page() { ?>
 
 	<div class="wrap">
-		<h1><?php _e( "Theme settings", "fed16" ); ?></h1>
+		<h1><?php _e( "Temainställningar: Kulgrej", "fed16" ); ?></h1>
 
 		<?php
-		$gaid = "";
-		if( isset($_POST["submit"] ) ) {
+		//$gaid = "";
+		/*if( isset($_POST["submit"] ) ) {
 			$new_gaid = esc_attr( $_POST["gaid"] );
 			//uppdatera i wp db
 			update_option( "gaid", $new_gaid ); // unikt namn om man använder många plugins
@@ -34,18 +34,88 @@ function kulgrej_settings_page() { ?>
 			</div>
 			<?php
 		}
+		echo $gaid;
+*/
 
-		$gaid = get_option( "gaid" );
+
+		$arr = array(
+			"gaid" => $gaid,
+			"lat" => $lat,
+			"lng" => $lng,
+			"address" => $adress,
+			"zip" => $zip,
+			"city" =>$city
+		);
+
+		//var_dump($arr);
+
+		foreach ($arr as $key => $value) {
+			if( isset( $_POST["submit"] ) ) {
+				echo "Key:".$key . "value: ". $value . "<br>";
+				if ( !empty( $_POST['$key'] ) ) {
+					$new_value = esc_attr( $_POST[$key] );
+					//uppdatera i wp db
+					update_option( $key, $new_value ); // unikt namn om man använder många plugins
+				}
+
+			} ?>
+			<div id="settings-error-settings-updated" class="updated settings-error notice is-dismissable">
+			<p><strong><?php _e( "Inställningarna sparades", "fed16" ); ?></strong></p>
+			<button type="button" class="notice-dismiss"></button>
+		</div> <?php
+		}
+
+
+
+		//$gaid = get_option( "gaid" );
+
+		//$lat = $this->get_field_name( "lat" );
+
 		 ?>
 
 		<form method="post">
-			<h2><?php _e( "Google Analytics Tracking Code", "fed16" ); ?>Google Analytics</h2>
+			<h2><?php _e( "Google Analytics Tracking Code", "fed16" ); ?></h2>
 			<table class="form-table">
 				<tbody>
 					<tr>
 						<th scope="row"><label for="gaid"><?php _e( "GA Tracking ID", "fed16" ); ?></label></th>
 						<td>
-							<input type="text" name="gaid" id="gaid" value="<?php echo $gaid; ?>">
+							<input type="text" name="gaid" id="gaid" value="<?php echo get_option('gaid'); ?>">
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<h2><?php _e( "Adressinformation", "fed16" ); ?></h2>
+			<table class="form-table">
+				<tbody>
+					<tr>
+						<th scope="row"><label for="lat"><?php _e( "Latitud", "fed16" ); ?></label></th>
+						<td>
+							<input type="text" name="lat" id="lat" value="<?php echo get_option('$lat'); ?>">
+						</td>
+					</tr>
+					<tr>
+						<th scope="row"><label for="lng"><?php _e( "Longitud", "fed16" ); ?></label></th>
+						<td>
+							<input type="text" name="lng" id="lng" value="<?php echo $lng; ?>">
+						</td>
+					</tr>
+					<tr>
+						<th scope="row"><label for="Gatuadress"><?php _e( "Gatuadress", "fed16" ); ?></label></th>
+						<td>
+							<input type="text" name="adress" id="adress" value="<?php echo $adress; ?>">
+						</td>
+					</tr>
+					<tr>
+						<th scope="row"><label for="Postnummer"><?php _e( "Postnummer", "fed16" ); ?></label></th>
+						<td>
+							<input type="number" name="zip" id="zip" value="<?php echo $zip; ?>">
+						</td>
+					</tr>
+					<tr>
+						<th scope="row"><label for="Postort"><?php _e( "Postort", "fed16" ); ?></label></th>
+						<td>
+							<input type="text" name="city" id="city" value="<?php echo $city; ?>">
 						</td>
 					</tr>
 				</tbody>
@@ -54,6 +124,7 @@ function kulgrej_settings_page() { ?>
 				<input type="submit" name="submit" id="submit" value="<?php _e( "Save changes", "fed16" ); ?>" class="button button-primary">
 			</p>
 		</form>
+
 
 	</div>
 
