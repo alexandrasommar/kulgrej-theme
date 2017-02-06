@@ -24,16 +24,21 @@ remove_action( "wp_head", "print_emoji_detection_script", 7 );
 remove_action( "wp_print_styles", "print_emoji_styles" );
 remove_action( "wp_head", "feed_links", 2);
 
+add_action( 'wp_enqueue_scripts', 'setup_fed16_styles' );
 
-
-// hooks
-add_action( 'after_setup_theme', 'fed16_blog_setup' );
-
-function fed16_blog_setup () {
+function setup_fed16_styles () {
 	wp_enqueue_style( 'main', get_template_directory_uri() . '/css/style.css', null, '1.0', 'all' ); //1.0 gör att css:en inte cachas
 
 	wp_enqueue_style( 'roboto', '//fonts.googleapis.com/css?family=Josefin+Sans:300,400,700' ); // god praxis är att bara göra slash slash för att ladda in scripts
 	wp_enqueue_script( 'font-awesome_js', '//use.fontawesome.com/af24f8bf7a.js' );
+
+}
+
+
+// hooks
+add_action( 'init', 'fed16_blog_setup' );
+
+function fed16_blog_setup () {
 
 	register_nav_menu( 'mainmenu', 'Website main navigation' );
 
