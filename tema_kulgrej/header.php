@@ -7,7 +7,7 @@
 <body <?php body_class(); ?> >
 
 <header>
-	<nav>
+	<nav class="navbar1">
 		<div class="left"> <?php
 			if ( function_exists( 'the_custom_logo' ) ) {
 			    the_custom_logo();

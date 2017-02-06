@@ -12,6 +12,28 @@ get_header();
 	}
 </style>
 <div id="map"></div>
+
+<main class="main-container flex contact">
+
+	<h1 class="contact-title"><?php the_title(); ?></h1>
+
+	<?php
+	if ( have_posts() ) {
+
+		while ( have_posts() ) {
+			the_post();
+			the_content();
+		}
+
+	} ?>
+
+</main> <!-- /main-container -->
+<?php
+get_footer();
+?>
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBz_iX33lVHNaRK9TG7T06En2Z6GwyiysI&callback=initMap">
+</script>
 <script>
 function initMap() {
 
@@ -137,22 +159,3 @@ function initMap() {
 }
 
 </script>
-
-<main class="main-container flex contact">
-
-	<h1 class="contact-title"><?php the_title(); ?></h1>
-
-	<?php
-	if ( have_posts() ) {
-
-		while ( have_posts() ) {
-			the_post();
-			the_content();
-		}
-
-	} ?>
-
-</main> <!-- /main-container -->
-<?php
-get_footer();
-?>

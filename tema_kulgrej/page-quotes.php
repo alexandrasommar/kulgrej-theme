@@ -48,7 +48,7 @@ if (has_post_thumbnail()) { ?>
 
 					<p><?php
 						if( !empty( $title ) ) {
-							echo $title . ", ";
+							echo "<i>" . $title . "</i>" . ", ";
 						}
 
 						if( !empty( $company ) ) {

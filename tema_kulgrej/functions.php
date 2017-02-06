@@ -20,6 +20,23 @@ function kulgrej_dashwidget() {
 	<?php
 }
 
+//Theme settings page
+
+//function setup_theme_admin_menus() {
+//    add_submenu_page("themes.php", "Front page settings", "Front page", "Manage options", "Front page elements", "theme_front_page_settings");
+//}
+//add_action("admin_menu", "setup_theme_admin_menus");
+
+function theme_front_page_settings() {
+    echo "Hello, world!";
+	// Check that the user is allowed to update options
+	if (!current_user_can('manage_options')) {
+	    wp_die('You do not have sufficient permissions to access this page.');
+	}
+}
+
+
+
 remove_action( "wp_head", "print_emoji_detection_script", 7 );
 remove_action( "wp_print_styles", "print_emoji_styles" );
 remove_action( "wp_head", "feed_links", 2);
