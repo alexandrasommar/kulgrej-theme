@@ -101,6 +101,10 @@
 
 	.quote-text {
 		width: 50%;
+		p {
+			max-width: 500px;
+			margin: 20px auto;
+		}
 	}
 
 }
