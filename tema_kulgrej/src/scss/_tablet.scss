@@ -81,7 +81,7 @@
 
 .about-us {
 	.about-text {
-		width: 60%;
+		width: 50%;
 	}
 }
 
@@ -89,7 +89,7 @@
 	@include flex-direction(row);
 	@include justify-content(space-between);
 	margin: auto;
-	width: 60%;
+	width: 50%;
 
 }
 
