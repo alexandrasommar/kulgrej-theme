@@ -5,14 +5,13 @@
 
 :root {
 	font-family: 'Josefin Sans', sans-serif;
-
 	font-size: 62.5%;
 }
 body {
 	background-color: $lightgrey;
 	color: $brown;
-	font-size: 16px;
-	font-size: 1.6em;
+	font-size: 17px;
+	font-size: 1.7em;
 }
 
 #{$a-tags} {
@@ -356,8 +355,6 @@ footer {
 	background-color: $brown;
 	box-sizing: border-box;
 	color: $lightgrey;
-	font-size: 14px;
-	font-size: 1.4em;
 	padding: 20px 0;
 	@include flexbox;
 	@include flex-direction(column);
@@ -374,6 +371,9 @@ footer {
 		i {
 			color: $lightgrey;
 			padding: 0 6px;
+			&:hover {
+				color: $blue;
+			}
 		}
 	}
 }
