@@ -1,6 +1,7 @@
 <?php
 
 require "widget_social.php";
+require "widget_copyright.php";
 require "theme_settings.php"; // lektionsgrejs
 
 add_action( "wp_dashboard_setup", "fed16_remove_dashboard_boxes" );
@@ -73,25 +74,25 @@ function fed16_blog_setup () {
 
 	// Register sidebar
 	register_sidebar( array(
-		"name"			=> __( "Footer", "kulgrej" ),
+		"name"			=> __( "Footer kolumn 1", "kulgrej" ),
 		"id"			=> "footer1",
-		"description"	=> __( "Column 1 in footer", "kulgrej" ),
+		"description"	=> __( "Kolumn 1 i footern", "kulgrej" ),
 		"before_widget"	=> "<div class='footer-col-1'>",
 		"after_widget"	=> "</div>",
 	) );
 
 	register_sidebar( array(
-		"name"			=> __( "Footer", "kulgrej" ),
+		"name"			=> __( "Footer kolumn 2", "kulgrej" ),
 		"id"			=> "footer2",
-		"description"	=> __( "Column 2 in footer", "kulgrej" ),
+		"description"	=> __( "Kolumn 2 i footern", "kulgrej" ),
 		"before_widget"	=> "<div class='footer-col-2'>",
 		"after_widget"	=> "</div>",
 	) );
 
 	register_sidebar( array(
-		"name"			=> __( "Footer", "kulgrej" ),
+		"name"			=> __( "Footer kolumn 3", "kulgrej" ),
 		"id"			=> "footer3",
-		"description"	=> __( "Column 3 in footer", "kulgrej" ),
+		"description"	=> __( "Kolumn 3 i footern", "kulgrej" ),
 		"before_widget"	=> "<div class='footer-col-3'>",
 		"after_widget"	=> "</div>",
 	) );
