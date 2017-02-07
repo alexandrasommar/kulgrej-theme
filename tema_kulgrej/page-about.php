@@ -20,7 +20,7 @@ if (has_post_thumbnail()) { ?>
 	<?php
 	if( have_posts() ) {
 		while( have_posts() ) { ?>
-		<article class="about-text"> <?php
+		<article class="about-text line-height"> <?php
 			the_post();
 			the_content();
 		} ?>

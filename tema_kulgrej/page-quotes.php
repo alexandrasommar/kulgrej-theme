@@ -29,7 +29,7 @@ if (has_post_thumbnail()) { ?>
 
 				while( $quotes->have_posts() ) { ?>
 
-				<article class="quote-text"><?php
+				<article class="quote-text line-height"><?php
 					$quotes->the_post();
 
 					//gets the metabox field values

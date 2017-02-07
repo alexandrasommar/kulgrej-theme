@@ -154,7 +154,9 @@ function initMap() {
 	var marker = new google.maps.Marker({
 					position: {lat: 59.301414, lng: 18.027660},
 					map: map,
-					title: 'Kulgrej'
+					title: "Kulgrej
+							Årsta Skolgränd 6,
+							117 43 Stockholm"
 				});
 }
 
