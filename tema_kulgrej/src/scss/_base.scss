@@ -93,16 +93,13 @@ header {
 			padding-right: 20px;
 			width: 480px;
 		}
-
 		.menu-menu-container ul {
 			@include flexbox;
 			@include justify-content(space-between);
-
 		}
 		.menu-item {
 			@include justify-content(space-between);
 		}
-
 	}
 	#{$a-menu} {
 		color: $lightgrey;
@@ -171,7 +168,7 @@ header {
 	margin: 0 auto;
 	width: 25%;
 
-	/*Sentence*/
+	/* Sentence */
 	.sentence {
 	     color: $lightgrey;
 	     font-size: 24px;
@@ -179,7 +176,7 @@ header {
 		 text-shadow: 0.5px 0.5px 0.5px $brown;
 	}
 
-	/*Horizontal Sliding*/
+	/* Horizontal Sliding */
 	.tw{
 		display: inline;
 	}
@@ -219,7 +216,7 @@ header {
 	}
 
 
-	/*leftToRight Animation*/
+	/* leftToRight Animation */
 	@keyframes leftToRight{
 		0% { opacity: 0; }
 		5% { opacity: 0; @include translateX(-100px); }
@@ -291,7 +288,6 @@ header {
 	/* padding-bottom: 50px; */
 	@include flexbox;
 	@include flex-direction(column);
-
 	.quote-text {
 		padding: 30px;
 		&:nth-child(even) {
@@ -358,17 +354,14 @@ header {
 	color: $grey;
 	font-size: 15px;
 }
-
 :-moz-placeholder {
 	color: $grey;
 	font-size: 15px;
 }
-
 ::-moz-placeholder {
 	color: $grey;
 	font-size: 15px;
 }
-
 :-ms-input-placeholder {
 	color: $grey;
 	font-size: 15px;

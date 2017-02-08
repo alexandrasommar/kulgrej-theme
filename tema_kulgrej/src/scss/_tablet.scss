@@ -102,20 +102,26 @@
 		QUOTES PAGE
 *************************** */
 
-.quote-container {
-	flex-wrap: wrap;
-	@include flex-direction(row);
-	@include justify-content(space-around);
+.main-quote {
 
-	.quote-text {
-		width: 50%;
-		p {
-			max-width: 500px;
-			margin: 20px auto;
+	.quote-container {
+		flex-wrap: wrap;
+		@include flex-direction(row);
+		@include justify-content(space-around);
+		.quote-text {
+			width: 50%;
+			&:last-child:nth-child(even) {
+				margin-bottom: 60px;
+			}
+			p {
+				max-width: 500px;
+				margin: 20px auto;
+			}
 		}
-	}
 
+	}
 }
+
 
 
 /* ***************************
