@@ -47,7 +47,7 @@ add_action( 'wp_enqueue_scripts', 'setup_tema_kulgrej_styles' );
 function setup_tema_kulgrej_styles () {
 	wp_enqueue_style( 'main', get_template_directory_uri() . '/css/style.css', null, '1.0', 'all' ); //1.0 gör att css:en inte cachas
 
-	wp_enqueue_style( 'roboto', '//fonts.googleapis.com/css?family=Josefin+Sans:300,400,700' ); // god praxis är att bara göra slash slash för att ladda in scripts
+	wp_enqueue_style( 'Fonts', '//fonts.googleapis.com/css?family=Catamaran:300,400%7cJosefin+Sans:300,400'); // god praxis är att bara göra slash slash för att ladda in scripts
 	wp_enqueue_script( 'font-awesome_js', '//use.fontawesome.com/af24f8bf7a.js' );
 
 }

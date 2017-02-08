@@ -4,7 +4,8 @@
 @import "assets/mixins";
 
 :root {
-	font-family: 'Josefin Sans', sans-serif;
+	font-family: 'Catamaran', sans-serif;
+	font-weight: 300;
 	font-size: 62.5%;
 }
 body {
@@ -29,6 +30,8 @@ ul {
 h1, h2 {
 	font-weight: 400;
 	text-transform: uppercase;
+	font-family: 'Josefin Sans', sans-serif;
+
 }
 h1 {
 	font-size: 30px;
@@ -41,6 +44,7 @@ h1 {
 h3 {
 	font-size: 20px;
 	font-size: 2.0em;
+	font-family: 'Josefin Sans', sans-serif;
 }
 .line-height {
 	line-height: 14px;
@@ -296,8 +300,6 @@ header {
 		font-weight: bold;
 	}
 }
-
-
 
 
 /* ***************************
