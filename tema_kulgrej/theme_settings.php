@@ -18,13 +18,13 @@ function tema_kulgrej_settings_page() { ?>
 		<h1><?php _e( "Temainställningar: Kulgrej", "tema_kulgrej" ); ?></h1> <?php
 
 		$inputData = array(
-			"name" => $_POST["name"],
-			"gaid" => $_POST["gaid"],
-			"gmid" => $_POST["gmid"],
-			"lat" => $_POST["lat"],
-			"lng" => $_POST["lng"],
-			"address" => $_POST["address"],
-			"postal" => $_POST["postal"]
+			"name" 		=> $_POST["name"],
+			"gaid" 		=> $_POST["gaid"],
+			"gmid" 		=> $_POST["gmid"],
+			"lat" 		=> $_POST["lat"],
+			"lng" 		=> $_POST["lng"],
+			"address"	=> $_POST["address"],
+			"postal" 	=> $_POST["postal"]
 		);
 
 		// Save info in db
@@ -43,13 +43,13 @@ function tema_kulgrej_settings_page() { ?>
 		}
 
 		$form = array(
-			"name" => "Namn",
-			"gaid" => "Google Analytics Tracking ID",
-			"gmid" => "Google Maps Tracking ID",
-			"lat" => "Latitud",
-			"lng" => "Longitud",
-			"address" => "Gatuadress",
-			"postal" => "Postnummer & postort"
+			"name" 		=> "Namn",
+			"gaid"		=> "Google Analytics Tracking ID",
+			"gmid" 		=> "Google Maps Tracking ID",
+			"lat"		=> "Latitud",
+			"lng"		=> "Longitud",
+			"address" 	=> "Gatuadress",
+			"postal" 	=> "Postnummer & postort"
 		);
 
 		// Create the form for the settings page ?>
