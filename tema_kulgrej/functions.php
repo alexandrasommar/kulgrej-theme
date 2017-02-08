@@ -4,8 +4,8 @@ require "widget_social.php";
 require "widget_copyright.php";
 require "theme_settings.php"; // lektionsgrejs
 
-add_action( "wp_dashboard_setup", "fed16_remove_dashboard_boxes" );
-function fed16_remove_dashboard_boxes() {
+add_action( "wp_dashboard_setup", "tema_kulgrej_remove_dashboard_boxes" );
+function tema_kulgrej_remove_dashboard_boxes() {
 	global $wp_meta_boxes;
 	unset( $wp_meta_boxes["dashboard"]["side"]["core"]["dashboard_quick_press"] );
 	unset($wp_meta_boxes["dashboard"]["normal"]["core"]["dashboard_right_now"] ); // tar bort i "i korthet"
@@ -42,9 +42,9 @@ remove_action( "wp_head", "print_emoji_detection_script", 7 );
 remove_action( "wp_print_styles", "print_emoji_styles" );
 remove_action( "wp_head", "feed_links", 2);
 
-add_action( 'wp_enqueue_scripts', 'setup_fed16_styles' );
+add_action( 'wp_enqueue_scripts', 'setup_tema_kulgrej_styles' );
 
-function setup_fed16_styles () {
+function setup_tema_kulgrej_styles () {
 	wp_enqueue_style( 'main', get_template_directory_uri() . '/css/style.css', null, '1.0', 'all' ); //1.0 gör att css:en inte cachas
 
 	wp_enqueue_style( 'roboto', '//fonts.googleapis.com/css?family=Josefin+Sans:300,400,700' ); // god praxis är att bara göra slash slash för att ladda in scripts
@@ -54,9 +54,9 @@ function setup_fed16_styles () {
 
 
 // hooks
-add_action( 'init', 'fed16_blog_setup' );
+add_action( 'init', 'tema_kulgrej_blog_setup' );
 
-function fed16_blog_setup () {
+function tema_kulgrej_blog_setup () {
 
 	register_nav_menu( 'mainmenu', 'Website main navigation' );
 
