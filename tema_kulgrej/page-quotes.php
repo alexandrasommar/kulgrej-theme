@@ -14,7 +14,7 @@ if (has_post_thumbnail()) { ?>
 	</section> <?php
 	} ?>
 
-	<main class="main-container"><?php
+	<main class="main-container main-quote"><?php
 
 		//query to display all quote posts
 		$quotes = new WP_Query( array(

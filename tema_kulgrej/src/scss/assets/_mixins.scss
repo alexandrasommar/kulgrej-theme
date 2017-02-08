@@ -75,3 +75,10 @@ $a-menu-hover: 'a:active, a:hover';
 	-webkit-transform: translateY($value);
 	-ms-transform: translateY($value);
 }
+
+/* TRANSITION FOR LINKS AND BUTTONS */
+@mixin transition($str) {
+    -webkit-transition: $str;
+    -moz-transition: $str;
+    -o-transition: $str;
+}

@@ -7,30 +7,29 @@
 get_header();
 ?>
 <style>
-	#map {
-		height: 300px;
-	}
+
 </style>
+
 <div id="map"></div>
 
 <main class="main-container flex contact">
 
-	<h1 class="contact-title"><?php the_title(); ?></h1>
+	<h1 class="contact-title"><?php the_title(); ?></h1> <?php
 
-	<?php
 	if ( have_posts() ) {
 
 		while ( have_posts() ) {
 			the_post();
 			the_content();
 		}
-
 	} ?>
 
-</main> <!-- /main-container -->
-<?php
-get_footer();
-?>
+</main> <!-- /main-container --> <?php
+
+get_footer(); ?>
+
+
+
 <script async defer
 src="https://maps.googleapis.com/maps/api/js?key=<?php echo get_option('gmid'); ?>&callback=initMap">
 </script>

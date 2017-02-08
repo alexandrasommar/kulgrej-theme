@@ -26,11 +26,11 @@
 		text-indent: 8px;
 	}
 	.tw span{
-		@include animation(topToBottom 22.5s linear infinite 0s);
 		color: $orange;
 		opacity: 0;
 		overflow: hidden;
 		position: absolute;
+		@include animation(topToBottom 22.5s linear infinite 0s);
 	}
 	.tw span:nth-child(1){
 		@include animation-delay(0s);
@@ -89,9 +89,9 @@
 
 .contact-info {
 	@include flex-direction(row);
-	@include justify-content(space-between);
+	@include justify-content(space-around);
 	margin: auto;
-	width: 75%;
+	width: 85%;
 	.about {
 		padding-top: 30px;
 	}
@@ -103,8 +103,8 @@
 *************************** */
 
 .quote-container {
-	@include flex-direction(row);
 	flex-wrap: wrap;
+	@include flex-direction(row);
 	@include justify-content(space-around);
 
 	.quote-text {

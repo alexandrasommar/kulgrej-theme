@@ -20,6 +20,7 @@ body {
 }
 #{$a-tags-hover} {
 	font-weight: bold;
+	@include transition(all 200ms ease-in-out);
 }
 ul {
 	list-style: none;
@@ -33,6 +34,8 @@ h1 {
 	font-size: 30px;
 	font-size: 3em;
 	letter-spacing: 2px;
+	line-height: 14px;
+	line-height: 1.4em;
 }
 
 h3 {
@@ -40,13 +43,14 @@ h3 {
 	font-size: 2.0em;
 }
 .line-height {
+	line-height: 14px;
 	line-height: 1.4em;
 }
 .flex {
+	max-width: 100%;
 	@include flexbox;
 	@include flex-direction(column);
 	@include justify-content(center);
-	max-width: 100%;
 }
 .fixed {
 	background-attachment: fixed;
@@ -65,8 +69,8 @@ header {
 		width: 100%;
 		height: 100%;
 		@include flexbox;
-		@include justify-content(space-between);
 		@include align-items(flex-end);
+		@include justify-content(space-between);
 		.left {
 			height: 100%;
 			padding-left: 20px;
@@ -101,6 +105,7 @@ header {
 	#{$a-menu-hover} {
 		color: $orange;
 		font-weight: normal;
+		@include transition(all 200ms ease-in-out);
 	}
 }
 
@@ -257,11 +262,11 @@ header {
 }
 
 .contact-info {
+	margin: 0 20px;
 	max-height: 100%;
 	padding-bottom: 40px;
 	@include flexbox;
 	@include flex-direction(column);
-	margin: 0 20px;
 	.about {
 		height: 80%;
 	}
@@ -271,20 +276,24 @@ header {
 		QUOTES PAGE
 *************************** */
 
+.main-quote {
+	margin-left: 0;
+	margin-right: 0;
+	margin-bottom: 0;
+}
 .quote-container {
+	/* padding-bottom: 50px; */
 	@include flexbox;
 	@include flex-direction(column);
-	padding-bottom: 50px;
 
 	.quote-text {
-		padding: 20px;
+		padding: 30px;
 		&:nth-child(even) {
 			background-color: $orange;
 		}
 	}
 	.quoter {
 		font-weight: bold;
-
 	}
 }
 
@@ -295,6 +304,9 @@ header {
 		CONTACT PAGE
 *************************** */
 
+#map {
+	height: 300px;
+}
 .contact {
 	margin: 0 auto;
 	padding-top: 40px;
@@ -313,23 +325,28 @@ header {
 		border: 1px solid $blue;
 		font-family: 'Josefin Sans', sans-serif;
 		width: 100%;
+		box-sizing: border-box;
 	}
 	.wpcf7-submit {
 		background-color: $blue;
 		color: $lightgrey;
 		padding: 10px;
 		width: 100%;
+		box-sizing: border-box;
 	}
 	.wpcf7-textarea {
 		padding: 10px;
+		box-sizing: border-box;
 	}
 	.g-recaptcha {
 		border: none;
 		padding-left: calc((100% - 304px)/2);
+		box-sizing: border-box;
 	}
 	input {
 		font-size: 15px;
 		padding: 10px;
+		box-sizing: border-box;
 	}
 }
 
@@ -380,6 +397,7 @@ footer {
 			padding: 0 6px;
 			&:hover {
 				color: $blue;
+				@include transition(all 200ms ease-in-out);
 			}
 		}
 	}
@@ -413,6 +431,7 @@ footer {
 		color: $brown;
 		&:hover {
 			color: $blue;
+			@include transition(all 200ms ease-in-out);
 		}
 	}
 
@@ -426,6 +445,7 @@ footer {
 .list-result {
 	a:hover {
 		font-weight: normal;
+		@include transition(all 200ms ease-in-out);
 
 	}
 }
