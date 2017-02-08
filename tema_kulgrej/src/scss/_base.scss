@@ -328,30 +328,30 @@ header {
 		border: none;
 		padding-left: calc((100% - 304px)/2);
 	}
+	input {
+		font-size: 15px;
+		padding: 10px;
+	}
 }
 
 ::-webkit-input-placeholder {
 	color: $grey;
 	font-size: 15px;
-	padding: 5px;
 }
 
 :-moz-placeholder {
 	color: $grey;
 	font-size: 15px;
-	padding: 5px;
 }
 
 ::-moz-placeholder {
 	color: $grey;
 	font-size: 15px;
-	padding: 5px;
 }
 
 :-ms-input-placeholder {
 	color: $grey;
 	font-size: 15px;
-	padding: 5px;
 }
 
 /* ***************************
