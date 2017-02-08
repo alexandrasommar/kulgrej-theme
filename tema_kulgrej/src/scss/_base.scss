@@ -324,6 +324,10 @@ header {
 		box-sizing: border-box;
 		padding: 0;
 	}
+	.g-recaptcha {
+		border: none;
+		padding-left: calc((100% - 304px)/2);
+	}
 }
 
 ::-webkit-input-placeholder {
