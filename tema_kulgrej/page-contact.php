@@ -32,13 +32,13 @@ get_header();
 get_footer();
 ?>
 <script async defer
-src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBz_iX33lVHNaRK9TG7T06En2Z6GwyiysI&callback=initMap">
+src="https://maps.googleapis.com/maps/api/js?key=<?php echo get_option('gmid'); ?>&callback=initMap">
 </script>
 <script>
 function initMap() {
 
 	var map = new google.maps.Map(document.getElementById('map'), {
-		center: {lat: 59.301414, lng: 18.027660},
+		center: {lat: <?php echo get_option('lat'); ?>, lng: <?php echo get_option('lng'); ?>},
 		zoom: 15,
 		styles: [
 			{elementType: 'geometry', stylers: [{color: '#ebe3cd'}]},
@@ -152,11 +152,9 @@ function initMap() {
 		]
 	});
 	var marker = new google.maps.Marker({
-					position: {lat: 59.301414, lng: 18.027660},
+					position: {lat: <?php echo get_option('lat'); ?>, lng: <?php echo get_option('lng'); ?>},
 					map: map,
-					title: "Kulgrej
-							Årsta Skolgränd 6,
-							117 43 Stockholm"
+					title: "<?php echo get_option('name'); ?>, <?php echo get_option('address'); ?>, <?php echo get_option('postal'); ?>"
 				});
 }
 
