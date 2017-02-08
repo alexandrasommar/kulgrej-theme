@@ -175,7 +175,7 @@ header {
 	     color: $lightgrey;
 	     font-size: 24px;
 		 font-weight: 400;
-		 text-shadow: 0.5px 0.5px 0.5px $brown;
+		 text-shadow: 1.5px 1.5px 1.5px $brown;
 	}
 
 	/* Horizontal Sliding */
@@ -331,10 +331,18 @@ header {
 	}
 	.wpcf7-submit {
 		background-color: $blue;
+		box-sizing: border-box;
 		color: $lightgrey;
+		font-size: 11px;
+		font-size: 1.1em;
 		padding: 10px;
 		width: 100%;
-		box-sizing: border-box;
+		&:hover {
+			background-color: rgba(#098f9e, 0.96);
+			box-shadow: 1px 1px 1px $grey;
+			color: white;
+			@include transition(all 200ms ease-in-out);
+		}
 	}
 	.wpcf7-textarea {
 		padding: 10px;
