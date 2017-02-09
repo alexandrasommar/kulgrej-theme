@@ -126,7 +126,6 @@ header {
 
 .header-img {
 	background-position: center center;
-	background-size: cover;
 	height: 100%;
 	max-width: 100%;
 	padding: 60px 0 60px;
@@ -149,6 +148,7 @@ header {
 	@extend .header-img;
 	background-attachment: initial;
 	background-color: $brown;
+	background-size: cover;
 	flex-direction: column;
 	justify-content: center;
 	padding: 20%;
