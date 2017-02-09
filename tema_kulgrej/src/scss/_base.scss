@@ -115,6 +115,10 @@ header {
 		@include transition(all 200ms ease-in-out);
 	}
 }
+	#responsive-menu-button {
+		background-color: $brown !important;
+		border: 2px solid $orange !important;
+	}
 
 /* ***************************
 		HEADER IMG
