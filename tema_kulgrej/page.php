@@ -1,19 +1,19 @@
 <?php get_header(); ?>
 
-<main class="main-container" style="margin-bottom: 450px;">
-	<?php
-	if(have_posts()) {
-		while(have_posts()) {
-			the_post();
+<main class="main-container">
+	<section><?php
+		if( have_posts() ) {
+			while( have_posts() ) { ?>
+			<article> <?php
+				the_post();
+				the_content();
 
-			if (has_post_thumbnail() ) {
-				the_post_thumbnail('medium');
-			}
-			the_title();
-			the_content();
-		}
-	}
-	?>
-</main>
+				} ?>
+			</article> <?php
+
+		}	?>
+
+	</section>
+</main> <!-- /main-container -->
 <?php
 get_footer(); ?>
