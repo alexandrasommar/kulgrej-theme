@@ -59,7 +59,6 @@ function tema_kulgrej_settings_page() { ?>
 				<tbody> <?php
 					foreach ($form as $key => $value) { ?>
 						<tr>
-							<?php echo $key; ?>
 							<th scope="row"><label for="<?php echo $key; ?>"><?php _e( $value, "tema_kulgrej" ); ?></label></th>
 							<td>
 								<input type="text" name="<?php echo $key; ?>" id="<?php echo $key; ?>" value="<?php echo get_option($key); ?>">
