@@ -125,7 +125,8 @@ header {
 *************************** */
 
 .header-img {
-	background-position: center center;
+	background-position: top center;
+	background-repeat: no-repeat;
 	height: 100%;
 	max-width: 100%;
 	padding: 60px 0 60px;

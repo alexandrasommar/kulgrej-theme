@@ -53,8 +53,6 @@ function setup_tema_kulgrej_styles () {
 }
 
 
-// hooks
-add_action( 'init', 'tema_kulgrej_blog_setup' );
 
 function tema_kulgrej_blog_setup () {
 
@@ -98,4 +96,6 @@ function tema_kulgrej_blog_setup () {
 	) );
 }
 
+// hooks
+add_action( 'init', 'tema_kulgrej_blog_setup' );
 ?>
