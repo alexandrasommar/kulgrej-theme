@@ -18,7 +18,7 @@ get_header();
 
 					}
 				} else {
-					echo "Tyvärr fanns det inga inlägg inom den här kategorin.";
+					echo "Tyvärr finns det inga inlägg inom den här kategorin.";
 				} ?>
 			</article>
 		</section>
