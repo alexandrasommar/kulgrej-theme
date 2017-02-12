@@ -59,7 +59,7 @@ function tema_kulgrej_blog_setup () {
 	register_nav_menu( 'mainmenu', 'Website main navigation' );
 
 	add_theme_support( 'post-thumbnails', array( 'post', 'kundcase_cpt_kulgrej', 'citat_cpt_kulgrej', 'page' ) );
-	add_image_size( 'blooper', 500, 500, array( 'left', 'top' ) );
+	add_image_size( 'cases', 300, 300, array( 'left', 'top' ) );
 	//the_post_thumbnail('blooper');
 
 	// Custom logo

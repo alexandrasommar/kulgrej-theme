@@ -4,35 +4,66 @@
 * Visar alla inlägg av typen kundcase.
 **/
 
-get_header(); ?>
+get_header();
 
-<main class="main-container" style="margin-bottom: 450px;">
 
-	<?php
-	if ( have_posts() ) {
-
-		while ( have_posts() ) {
-			the_post();
-			the_content();
-		}
-
+if (has_post_thumbnail()) { ?>
+	<section class="header-img fixed" style="background-image:url(<?php
+		if( wp_is_mobile() ) {
+			echo the_post_thumbnail_url('large');
+		} else {
+			echo the_post_thumbnail_url();
+		} ?>);">
+		<div class="header-bg">
+			<h1 class="header-title"><?php the_title(); ?></h1>
+		</div>
+	</section><?php
 	}
+	?>
 
-	//kommentera ut nedan när det finns kundcase inlagt!!
-	 // $cases = new WP_Query( array(
-	 //    'post_type'       =>  'kundcase_cpt_kulgrej'
-	 //    ) );
+<main class="main-container"><?php
 
-	 // if( $cases->have_posts() ) {
+	// query to display customer cases
+	 $cases = new WP_Query( array(
+	    "post_type"       	=>  "kundcase_cpt_kulgrej",
+	    "post_status"		=>	"publish"
+	    ) ); ?>
 
-	 // 	while( $cases->have_posts() ) {
+	<section class="cases-container"><?php
 
-	 // 		$cases->the_post();
+		 if( $cases->have_posts() ) {
 
-	 // 		the_title();
-	 // 	}
-	 // } ?>
+		 	while( $cases->have_posts() ) {
 
+		 		$cases->the_post();	?>
+
+				<article class="cases-content">
+
+					<div class="left">
+						<?php the_post_thumbnail('cases'); ?>
+					</div>
+
+					<div class="right">
+						<a href="<?php the_permalink(); ?>"><h3><?php the_title(); ?></h3></a><?php
+
+						the_content();
+
+						$terms = wp_get_post_terms( get_the_ID(), "kundcase_projecttype" );
+
+						foreach( $terms as $term ) {
+							$term_link = get_term_link( $term );
+							echo "<a href='" . esc_url( $term_link ) . "'>" . $term->name . "</a>" . " ";
+						}
+						?>
+					</div>
+				</article><?php
+		 		}
+		 		wp_reset_postdata();
+		 	} else {
+				echo "Tyvärr finns det inga kundcase publicerade";
+		 	}
+		 ?>
+	</section>
  </main> <?php
 
 get_footer();

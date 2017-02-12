@@ -313,6 +313,22 @@ header {
 	}
 }
 
+/* ***************************
+		CASES PAGE
+*************************** */
+
+.cases-container {
+	margin: 20px;
+	@include flexbox;
+	@include flex-direction(column);
+
+	.cases-content {
+		margin: 40px 0;
+		@include flexbox;
+		@include flex-direction(column);
+
+	}
+}
 
 /* ***************************
 		CONTACT PAGE
