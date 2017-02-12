@@ -3,17 +3,30 @@
 	color: $grey;
 }
 
+/* ***************************
+		INDEX PAGE
+*************************** */
+
+.index-img {
+
+	.header-bg {
+		width: 70%;
+	}
+}
+
 
 /* ***************************
 		TURNING WORDS
 *************************** */
 
 .turning-words {
-	width: 25%;
-	margin-left: 250px;
+	margin: 0;
+	text-align: center;
+	width: 70%;
 
 	/*Sentence*/
 	.sentence{
+		display: inline-flex;
 		font-size: 32px;
 		br {
 			display: none;

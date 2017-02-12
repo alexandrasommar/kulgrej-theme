@@ -157,24 +157,26 @@ header {
 *************************** */
 
 .index-img {
-	@extend .header-img;
-	background-attachment: initial;
 	background-color: $brown;
 	background-size: cover;
-	flex-direction: column;
-	justify-content: center;
+	@include flexbox;
+	@include flex-direction(column);
+	@include justify-content(center);
 	padding: 20%;
 	.header-bg {
 		background: rgba(239, 155, 40, 0.7);
 		margin: 0 auto;
-		width: 60%;
 		text-align: center;
+		width: 100%;
 		z-index: 100;
 	}
 	.index-title {
 		z-index: 1000;
 		img {
+			box-sizing: border-box;
 			max-width: 100%;
+			padding: 0 15%;
+
 		}
 	}
 }
@@ -185,7 +187,6 @@ header {
 
 .turning-words {
 	margin: 0 auto;
-	width: 25%;
 
 	/* Sentence */
 	.sentence {
