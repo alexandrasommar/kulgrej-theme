@@ -24,7 +24,9 @@ function tema_kulgrej_settings_page() { ?>
 			"lat" 		=> $_POST["lat"],
 			"lng" 		=> $_POST["lng"],
 			"address"	=> $_POST["address"],
-			"postal" 	=> $_POST["postal"]
+			"postal" 	=> $_POST["postal"],
+			"cookie"	=> $_POST["cookie"],
+			"cookie-btn"=> $_POST["cookie-btn"]
 		);
 
 		// Save info in db
@@ -49,7 +51,9 @@ function tema_kulgrej_settings_page() { ?>
 			"lat"		=> "Latitud",
 			"lng"		=> "Longitud",
 			"address" 	=> "Gatuadress",
-			"postal" 	=> "Postnummer & postort"
+			"postal" 	=> "Postnummer & postort",
+			"cookie"	=> "Text till cookie-notification",
+			"cookie-btn"=> "Text på cookie-knappen"
 		);
 
 		// Create the form for the settings page ?>
@@ -60,8 +64,12 @@ function tema_kulgrej_settings_page() { ?>
 					foreach ($form as $key => $value) { ?>
 						<tr>
 							<th scope="row"><label for="<?php echo $key; ?>"><?php _e( $value, "tema_kulgrej" ); ?></label></th>
-							<td>
-								<input type="text" name="<?php echo $key; ?>" id="<?php echo $key; ?>" value="<?php echo get_option($key); ?>">
+							<td> <?php
+							 	if ($key == "cookie") { ?>
+							 		<textarea name="<?php echo $key; ?>" id="<?php echo $key; ?>"><?php echo get_option($key); ?></textarea> <?php
+							 	} else { ?>
+									<input type="text" name="<?php echo $key; ?>" id="<?php echo $key; ?>" value="<?php echo get_option($key); ?> "> <?php
+								} ?>
 							</td>
 						</tr> <?php
 					} ?>

@@ -49,6 +49,7 @@ function setup_tema_kulgrej_styles () {
 
 	wp_enqueue_style( 'Fonts', '//fonts.googleapis.com/css?family=Catamaran:300,400%7cJosefin+Sans:300,400'); // god praxis är att bara göra slash slash för att ladda in scripts
 	wp_enqueue_script( 'font-awesome_js', '//use.fontawesome.com/af24f8bf7a.js' );
+	wp_enqueue_script( 'main', get_template_directory_uri() . '/js/main.js', array( 'jquery' ), '1.0', true );
 
 }
 
