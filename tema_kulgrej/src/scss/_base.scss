@@ -415,13 +415,13 @@ header {
 *************************** */
 
 footer {
-	align-items: center;
 	background-color: $brown;
 	box-sizing: border-box;
 	color: $lightgrey;
 	font-family: 'Josefin Sans', sans-serif;
 	padding: 20px 0;
 	@include flexbox;
+	@include align-items(center);
 	@include flex-direction(column);
 	@include orange-line;
 	.footer-col-1 {
