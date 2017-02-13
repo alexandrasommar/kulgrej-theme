@@ -2,9 +2,12 @@ var $ = jQuery;
 
 if( localStorage.getItem('notificationShown') == null ) {
 	$('#hideNotification').click(hideNotification);
-} elseif ( localStorage.getItem('notificationShown') != null ) {
+} else {
 	$('#cookie-notification').addClass("hidden");
 }
+// } elseif ( localStorage.getItem('notificationShown') != null ) {
+// 	$('#cookie-notification').addClass("hidden");
+// }
 
 // document.getElementById('hide-notification')
 // .addEventListener('click', hideNotification)
