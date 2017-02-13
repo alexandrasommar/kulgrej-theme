@@ -1,8 +1,19 @@
 </div><!-- /wrapper, header.php -->
-<div id="cookie-notification" class="cookie-notificaton" >
-	<?php echo get_option('cookie'); ?>
-	<button id="hide-notification"><?php echo get_option('cookie-btn'); ?></button>
-</div>
+
+<?php
+
+$cookie = get_option("cookie");
+
+if (!empty($cookie) && $cookie !== " ") {
+
+?>
+	<div id="cookie-notification" class="cookie-notificaton" >
+		<?php echo $cookie; ?>
+		<button id="hide-notification"><?php echo get_option("cookie-btn"); ?></button>
+	</div><?php
+}
+?>
+
 <footer>
 
 
