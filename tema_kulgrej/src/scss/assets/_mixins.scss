@@ -38,12 +38,27 @@ $a-menu-hover: 'a:active, a:hover';
     -ms-flex: $grow;
     flex: $grow;
 }
-@mixin justify-content($value) {
-    -webkit-box-pack: $value;
-    -moz-box-pack: $value;
-    -ms-flex-pack: $value;
-    justify-content: $value;
+@mixin justify-content($justifyContent) {
+    -webkit-box-pack: $justifyContent;
+    -moz-box-pack: $justifyContent;
+    -ms-flex-pack: $justifyContent;
+    justify-content: $justifyContent;
+
+	//TO DO: try to find a solution to flex end in IE 10!!
+    // @if justify-content($justifyContent == flex-end) {
+    // 	-ms-flex-pack: end;
+    // }
+
+    @if justify-content($justifyContent == space-between) {
+		-ms-flex-pack: justify;
+    	}
+    @if justify-content($justifyContent == space-around) {
+    	-ms-flex-pack: distribute;
+    }
+
 }
+
+
 // Flex Line Wrapping
 // - applies to: flex containers
 // nowrap | wrap | wrap-reverse

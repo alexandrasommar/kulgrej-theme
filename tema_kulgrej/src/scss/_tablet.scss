@@ -118,7 +118,7 @@
 .main-quote {
 
 	.quote-container {
-		flex-wrap: wrap;
+		@include flex-wrap(wrap);
 		@include flex-direction(row);
 		@include justify-content(space-around);
 		.quote-text {
