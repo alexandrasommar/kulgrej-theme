@@ -48,6 +48,9 @@ if (has_post_thumbnail()) { ?>
 
 						the_content();
 
+						?>
+						<a href="<?php the_permalink(); ?>"><p>Läs mer</p></a><?php
+
 						$terms = wp_get_post_terms( get_the_ID(), "kundcase_projecttype" );
 
 						foreach( $terms as $term ) {

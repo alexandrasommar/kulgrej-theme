@@ -1,7 +1,7 @@
 <?php get_header();
 
 if (has_post_thumbnail()) { ?>
-	<section class="header-img fixed" style="background-image:url(<?php
+	<section class="header-img" style="background-image:url(<?php
 		if( wp_is_mobile() ) {
 			echo the_post_thumbnail_url('large');
 		} else {
@@ -19,6 +19,13 @@ if (has_post_thumbnail()) { ?>
 			the_post(); ?>
 			<h3><?php the_title(); ?></h3><?php
 			the_content();
+
+			$terms = wp_get_post_terms( get_the_ID(), "kundcase_projecttype" );
+
+			foreach( $terms as $term ) {
+				$term_link = get_term_link( $term );
+				echo "<a href='" . esc_url( $term_link ) . "'>" . $term->name . "</a>" . " ";
+			}
 		}
 	}
 	?>
