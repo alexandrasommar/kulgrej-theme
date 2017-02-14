@@ -27,6 +27,10 @@ if (has_post_thumbnail()) { ?>
 				echo "<a href='" . esc_url( $term_link ) . "'>" . $term->name . "</a>" . " ";
 			}
 		}
+		// If comments are open or we have at least one comment, load up the comment template.
+		if ( comments_open() || get_comments_number() ) {
+		    comments_template();
+		}
 	}
 	?>
 
