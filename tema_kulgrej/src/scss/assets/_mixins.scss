@@ -25,6 +25,11 @@ $a-menu-hover: 'a:active, a:hover';
     -webkit-align-items: $value;
     -webkit-box-align: $value;
     align-items: $value;
+
+	@if align-items($value == flex-end) {
+		-ms-flex-align: end;
+	}
+
 }
 @mixin flex-direction($direction) {
     -ms-flex-direction: $direction;
@@ -38,21 +43,16 @@ $a-menu-hover: 'a:active, a:hover';
     -ms-flex: $grow;
     flex: $grow;
 }
-@mixin justify-content($justifyContent) {
-    -webkit-box-pack: $justifyContent;
-    -moz-box-pack: $justifyContent;
-    -ms-flex-pack: $justifyContent;
-    justify-content: $justifyContent;
+@mixin justify-content($value) {
+    -webkit-box-pack: $value;
+    -moz-box-pack: $value;
+    -ms-flex-pack: $value;
+    justify-content: $value;
 
-	//TO DO: try to find a solution to flex end in IE 10!!
-    // @if justify-content($justifyContent == flex-end) {
-    // 	-ms-flex-pack: end;
-    // }
-
-    @if justify-content($justifyContent == space-between) {
+    @if justify-content($value == space-between) {
 		-ms-flex-pack: justify;
     	}
-    @if justify-content($justifyContent == space-around) {
+    @if justify-content($value == space-around) {
     	-ms-flex-pack: distribute;
     }
 
