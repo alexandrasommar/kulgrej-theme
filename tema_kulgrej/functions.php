@@ -58,6 +58,15 @@ function extra_formats($init_array) {
 	return $init_array;
 }
 
+function admin_colors() {
+	wp_admin_css_color(
+		'Kulgrej', __( 'Kulgrej' ),
+		get_template_directory_uri() . '/admin-styles/colors.css',
+		array( '#261C16', '#F19C08', '#087E8B', '#F2F2F2' )
+	);
+}
+add_action( 'admin_init', 'admin_colors' );
+
 
 
 remove_action( "wp_head", "print_emoji_detection_script", 7 );
