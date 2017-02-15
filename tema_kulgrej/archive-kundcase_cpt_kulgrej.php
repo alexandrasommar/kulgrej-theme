@@ -14,7 +14,7 @@ get_header();
 
 	<section class="cases-container"><?php
 
-		 if( $cases->have_posts() ) {
+		if( $cases->have_posts() ) {
 
 		 	while( $cases->have_posts() ) {
 
@@ -36,18 +36,16 @@ get_header();
 						foreach( $terms as $term ) {
 							$term_link = get_term_link( $term );
 							echo "<a href='" . esc_url( $term_link ) . "'>" . $term->name . "</a>" . " ";
-						}
-						?>
+						} ?>
 					</div>
 				</article><?php
-		 		}
-		 		wp_reset_postdata();
-		 	} else {
-				echo "Tyvärr finns det inga kundcase publicerade";
 		 	}
-		 ?>
+		 	wp_reset_postdata();
+		} else {
+				echo "Tyvärr finns det inga kundcase publicerade";
+		} ?>
 	</section>
- </main> <?php
+</main> <?php
 
 get_footer();
 
