@@ -63,7 +63,7 @@ if (has_post_thumbnail()) { ?>
 		 		}
 		 		wp_reset_postdata();
 		 	} else {
-				echo "Tyvärr finns det inga kundcase publicerade";
+				echo _e("Tyvärr finns det inga kundcase publicerade");
 		 	}
 		 ?>
 	</section>

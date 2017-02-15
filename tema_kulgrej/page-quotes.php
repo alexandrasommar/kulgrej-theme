@@ -66,7 +66,7 @@ if (has_post_thumbnail()) { ?>
 				}
 				wp_reset_postdata();
 			} else {
-				"Det finns inga kundcitat publicerade";
+				_e("Det finns inga kundcitat publicerade");
 			} ?>
 		</section>
 
