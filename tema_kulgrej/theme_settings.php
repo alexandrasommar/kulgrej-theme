@@ -6,7 +6,7 @@ function setup_theme_admin_menus() {
 	$menu_name = _x( "Kulgrejs inställnignar", "tema_kulgrej" );
 	$page_title = _x( "Kulgrej", "tema_kulgrej" );
 
-	add_menu_page( $page_title, $menu_name, "manage_options", "tema_kulgrej_settings", "tema_kulgrej_settings_page", "dashicons-smiley" );
+	add_menu_page( $page_title, $menu_name, "edit_posts", "tema_kulgrej_settings", "tema_kulgrej_settings_page", "dashicons-smiley" );
 }
 
 /**
