@@ -9,3 +9,7 @@
 @media screen and (min-width:1150px) {
 	@import "_desktop";
 }
+
+@media print {
+	@import "assets/_print";
+}
