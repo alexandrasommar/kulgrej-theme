@@ -27,20 +27,45 @@ function kulgrej_dashwidget() {
 	<?php
 }
 
-//Theme settings page
-
-//function setup_theme_admin_menus() {
-//    add_submenu_page("themes.php", "Front page settings", "Front page", "Manage options", "Front page elements", "theme_front_page_settings");
-//}
-//add_action("admin_menu", "setup_theme_admin_menus");
-
-function theme_front_page_settings() {
-    echo "Hello, world!";
-	// Check that the user is allowed to update options
-	if (!current_user_can('manage_options')) {
-	    wp_die('You do not have sufficient permissions to access this page.');
-	}
+add_action( "after_setup_theme", "add_editor_styles" );
+function add_editor_styles() {
+	add_editor_style( "admin-styles/editor-style.css" );
 }
+
+// lägger till knappar i editorn
+add_filter('mce_buttons_2', 'wp_mce_buttons_2');
+function wp_mce_buttons_2($buttons) {
+	array_unshift($buttons, 'styleselect');
+	return $buttons;
+}
+
+add_filter('tiny_mce_before_init', 'extra_formats');
+function extra_formats($init_array) {
+	$style_formats = array(
+		array(
+			'title' => 'Gult block',
+			'block' => 'div',
+			'classes' => 'yellow-block button',
+			'wrapper' => false,
+			'styles' => array(
+				'color' => 'black',
+				'font-family' => 'Impact',
+				'background-color' => 'yellow'
+				)
+			)
+		);
+	$init_array['style_formats'] = json_encode($style_formats);
+	return $init_array;
+}
+
+function admin_colors() {
+	wp_admin_css_color(
+		'Kulgrej', __( 'Kulgrej' ),
+		get_template_directory_uri() . '/admin-styles/colors.css',
+		array( '#261C16', '#F19C08', '#087E8B', '#F2F2F2' )
+	);
+}
+add_action( 'admin_init', 'admin_colors' );
 
 
 
@@ -132,6 +157,7 @@ function wpdocs_custom_excerpt_length( $length ) {
     return 20;
 }
 add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
+
 
 
 

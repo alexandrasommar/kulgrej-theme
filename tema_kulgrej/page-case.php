@@ -44,7 +44,7 @@ if (has_post_thumbnail()) { ?>
 					</div>
 
 					<div class="right">
-						<a href="<?php the_permalink(); ?>"><h3><?php the_title(); ?></h3></a><?php
+						<a href="<?php the_permalink(); ?>"><p><?php the_title(); ?></p></a><?php
 
 						the_content();
 
