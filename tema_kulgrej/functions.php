@@ -11,13 +11,19 @@ function tema_kulgrej_remove_dashboard_boxes() {
 	unset($wp_meta_boxes["dashboard"]["normal"]["core"]["dashboard_right_now"] ); // tar bort i "i korthet"
 	unset($wp_meta_boxes["dashboard"]["side"]["core"]["dashboard_primary"] ); // tar bort nyheter från wp
 
-	wp_add_dashboard_widget( "kulgrejdashboard", "Support", "kulgrej_dashwidget" );
+	wp_add_dashboard_widget( "kulgrejdashboard", "Genvägar", "kulgrej_dashwidget" );
 }
 
 function kulgrej_dashwidget() {
 	?>
-	Har du ett problem?<br>
-	Ring 070 123 456 78
+	<h3>Vill du lägga till ett nytt kundcase?</h3>
+	<p><a href="post-new.php?post_type=kundcase_cpt_kulgrej">Lägg till Kundcase</a></p>
+	<h3>Vill du lägga till ett nytt kundcitat?</h3>
+	<p><a href="post-new.php?post_type=citat_cpt_kulgrej">Lägg till Kundcitat</a></p>
+	<h3>Här kan du ändra adressuppgifter mm:</h3>
+	<p><a href="admin.php?page=tema_kulgrej_settings">Ändra uppgifter</a></p>
+	<h3>Ändra på en specifik sida:</h3>
+	<p><a href="edit.php?post_type=page">Redigera sida</a></p>
 	<?php
 }
 
