@@ -60,10 +60,10 @@ class SocialMediaLinks extends WP_Widget {
 		$instaurl = $instance["instagram"];
 
 		echo $args["before_widget"];
-		echo "<a href='$faceurl' target='_blank'>";
+		echo "<a href='$faceurl' target='_blank' aria-label='Facebook'>";
 		echo "<i class='fa fa-facebook-square fa-3x' aria-hidden='true'></i>";
 		echo "</a>";
-		echo "<a href='$instaurl' target='_blank'>";
+		echo "<a href='$instaurl' target='_blank' aria-label='Instagram'>";
 		echo "<i class='fa fa-instagram fa-3x' aria-hidden='true'></i>";
 		echo "</a>";
 		echo $args[ "after_widget"];
