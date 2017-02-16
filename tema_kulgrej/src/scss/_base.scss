@@ -141,11 +141,12 @@ header {
 *************************** */
 
 .header-img {
-	background-position: center center;
-	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-attachment: initial;
+	background-size: cover;
 	max-height: 100%;
-	max-width: 100%;
-	padding: 60px 0 60px;
+	padding: 60px 0;
+	width: 100%;
 	@include flexbox;
 	@include justify-content(center);
 	.header-bg {
