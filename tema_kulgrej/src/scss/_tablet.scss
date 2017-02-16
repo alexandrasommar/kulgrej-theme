@@ -21,14 +21,14 @@
 
 .turning-words {
 	margin-top: 30px;
-	text-align: center;
-	width: 70%;
+	width: 400px;
+	@include flex-direction(row);
+
 
 	/*Sentence*/
 	.sentence{
-		display: inline-flex;
-		font-size: 26px;
-		font-size: 2.6em;
+		font-size: 22px;
+		font-size: 2.2em;
 		margin: 0;
 		br {
 			display: none;
@@ -37,10 +37,9 @@
 
 	/*Vertical Sliding*/
 	.tw {
-		display: inline;
 		text-indent: 8px;
-		font-size: 26px;
-		font-size: 2.6em;
+		font-size: 22px;
+		font-size: 2.2em;
 	}
 	.tw span {
 		color: $orange;
