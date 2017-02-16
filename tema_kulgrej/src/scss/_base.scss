@@ -200,6 +200,9 @@ header {
 
 .turning-words {
 	margin: 0 auto;
+	width: 200px;
+	@include flexbox;
+	@include flex-direction(column);
 
 	/* Sentence */
 	.sentence {
@@ -211,19 +214,21 @@ header {
 		 margin-bottom: 5px;
 		 text-shadow: 1.5px 1.5px 1.5px $brown;
 		 text-transform: uppercase;
+		 @include flexbox;
 	}
 
 	/* Horizontal Sliding */
 	.tw{
-		display: inline;
+		//display: inline;
 		@extend .sentence;
-	}
-	 span{
-		color: $orange;
-		opacity: 0;
-		overflow: hidden;
-		position: absolute;
-		@include animation(leftToRight 27s linear infinite 0s);
+
+		span{
+			color: $orange;
+			opacity: 0;
+			overflow: hidden;
+			position: absolute;
+			@include animation(leftToRight 27s linear infinite 0s);
+		}
 	}
 	.tw span:nth-child(2){
 		@include animation-delay(3s);
