@@ -1,5 +1,5 @@
 <?php
-// I er tema-mapp (fed16 t.ex.), spara filen som widget-foodlist.php
+// Creates the social media links widget
 class SocialMediaLinks extends WP_Widget {
 
 	public function __construct() {
@@ -9,7 +9,7 @@ class SocialMediaLinks extends WP_Widget {
 
 		parent::__construct( $id, $name, $desc );
 	}
-	// Admin-formuläret under Appearance -> Widgets för denna widget
+	// The Admin form displayed in Appearance -> Widgets
 	public function form( $instance ) {
 		$faceurl = $instance["facebook"];
 		$faceid = esc_attr( $this->get_field_id( "facebook" ) );
@@ -38,7 +38,7 @@ class SocialMediaLinks extends WP_Widget {
 		</p> <?php
 
 	}
-
+	// If a new input is made in the form, update in db
 	public function update( $new_instance, $old_instance ) {
 		$instance = array();
 		if( !empty( $new_instance["facebook"] ) ) {
@@ -50,7 +50,9 @@ class SocialMediaLinks extends WP_Widget {
 		}
 		return $instance;
 	}
-	// Visa widget i frontend
+	// Displays widget in the front end area with
+	// the the facebook and instagram icon
+	// and corresponding links
 	public function widget( $args, $instance ) {
 
 		extract( $args );
