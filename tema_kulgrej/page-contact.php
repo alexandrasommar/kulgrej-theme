@@ -4,16 +4,11 @@
 * Visar kontaktsidan
 **/
 
-get_header();
-?>
-<style>
-
-</style>
+get_header(); ?>
 
 <div id="map"></div>
 
 <main class="main-container flex contact">
-
 	<h1 class="contact-title"><?php the_title(); ?></h1> <?php
 
 	if ( have_posts() ) {
@@ -28,10 +23,7 @@ get_header();
 
 get_footer(); ?>
 
-
-
-<script async defer
-src="https://maps.googleapis.com/maps/api/js?key=<?php echo get_option('gmid'); ?>&callback=initMap">
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=<?php echo get_option('gmid'); ?>&callback=initMap">
 </script>
 <script>
 function initMap() {

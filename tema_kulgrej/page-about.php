@@ -23,7 +23,7 @@ if (has_post_thumbnail()) { ?>
 
 <main class="main-container flex">
 
-<section class="about-us">
+<div class="about-us">
 	<?php
 	if( have_posts() ) {
 		while( have_posts() ) { ?>
@@ -32,17 +32,17 @@ if (has_post_thumbnail()) { ?>
 			the_content();
 		} ?>
 		</article>
-</section>
+</div>
 
 
-<section class="contact-info">
+<div class="contact-info">
 	<article class="about">
 		<?php the_field( 'left' ); ?>
 	</article>
 	<article class="about">
 		<?php the_field( 'right' ); ?>
 	</article>
-</section> <?php
+</div> <?php
 
 } ?>
 

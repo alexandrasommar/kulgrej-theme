@@ -29,7 +29,7 @@ if (has_post_thumbnail()) { ?>
 	    "post_status"		=>	"publish"
 	    ) ); ?>
 
-	<section class="cases-container"><?php
+	<div class="cases-container"><?php
 
 		 if( $cases->have_posts() ) {
 
@@ -37,38 +37,34 @@ if (has_post_thumbnail()) { ?>
 
 		 		$cases->the_post();	?>
 
-				<article class="cases-content">
+				<div class="cases-content">
 
-					<div class="left">
-						<?php the_post_thumbnail( 'cases' ); ?>
+					<div class="left"> <?php
+						the_post_thumbnail( 'cases' ); ?>
 					</div>
 
-					<div class="right">
-						<a href="<?php the_permalink(); ?>"><p><?php the_title(); ?></p></a><?php
+					<article class="right">
+						<a href="<?php the_permalink(); ?>"><p><?php the_title(); ?> </p></a> <?php
 
-						the_content();
+						the_content(); ?>
 
-						?>
-						<a href="<?php the_permalink(); ?>"><p>Läs mer</p></a><?php
+						<a href="<?php the_permalink(); ?>"><p>Läs mer</p></a> <?php
 
 						$terms = wp_get_post_terms( get_the_ID(), "kundcase_projecttype" );
 
 						foreach( $terms as $term ) {
 							$term_link = get_term_link( $term );
 							echo "<a href='" . esc_url( $term_link ) . "'>" . $term->name . "</a>" . " ";
-						}
-						?>
-					</div>
-				</article><?php
+						} ?>
+					</article>
+				</div><?php
 		 		}
 		 		wp_reset_postdata();
 		 	} else {
 				echo _e( "Tyvärr finns det inga kundcase publicerade", "tema_kulgrej" );
-		 	}
-		 ?>
-	</section>
+		 	} ?>
+	</div>
  </main> <?php
 
 get_footer();
-
 ?>
