@@ -18,7 +18,7 @@
 			} ?>
 		</div>
 		<div class="right">
-			<?php wp_nav_menu(array('theme_location' => 'mainmenu')); ?>
+			<?php wp_nav_menu( array( 'theme_location' => 'mainmenu' )); ?>
 		</div>
 	</nav>
 </header>

@@ -14,8 +14,8 @@ if (has_post_thumbnail()) { ?>
 	}
 ?>
 <main class="main-container"><?php
-	if(have_posts()) {
-		while(have_posts()) {
+	if( have_posts() ) {
+		while( have_posts() ) {
 			the_post(); ?>
 			<h3><?php the_title(); ?></h3><?php
 			the_content();

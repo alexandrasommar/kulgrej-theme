@@ -36,7 +36,7 @@ src="https://maps.googleapis.com/maps/api/js?key=<?php echo get_option('gmid'); 
 <script>
 function initMap() {
 
-	var map = new google.maps.Map(document.getElementById('map'), {
+	var map = new google.maps.Map(document.getElementById( 'map' ), {
 		center: {lat: <?php echo get_option('lat'); ?>, lng: <?php echo get_option('lng'); ?>},
 		zoom: 15,
 		styles: [
@@ -153,7 +153,7 @@ function initMap() {
 	var marker = new google.maps.Marker({
 					position: {lat: <?php echo get_option('lat'); ?>, lng: <?php echo get_option('lng'); ?>},
 					map: map,
-					title: "<?php echo get_option('name'); ?>, <?php echo get_option('address'); ?>, <?php echo get_option('postal'); ?>"
+					title: "<?php echo get_option( 'name' ); ?>, <?php echo get_option( 'address' ); ?>, <?php echo get_option( 'postal' ); ?>"
 				});
 }
 

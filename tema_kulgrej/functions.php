@@ -104,25 +104,25 @@ function tema_kulgrej_blog_setup () {
 
 	// Register sidebar
 	register_sidebar( array(
-		"name"			=> __( "Footer kolumn 1", "kulgrej" ),
+		"name"			=> __( "Footer kolumn 1", "tema_kulgrej" ),
 		"id"			=> "footer1",
-		"description"	=> __( "Kolumn 1 i footern", "kulgrej" ),
+		"description"	=> __( "Kolumn 1 i footern", "tema_kulgrej" ),
 		"before_widget"	=> "<div class='footer-col-1'>",
 		"after_widget"	=> "</div>",
 	) );
 
 	register_sidebar( array(
-		"name"			=> __( "Footer kolumn 2", "kulgrej" ),
+		"name"			=> __( "Footer kolumn 2", "tema_kulgrej" ),
 		"id"			=> "footer2",
-		"description"	=> __( "Kolumn 2 i footern", "kulgrej" ),
+		"description"	=> __( "Kolumn 2 i footern", "tema_kulgrej" ),
 		"before_widget"	=> "<div class='footer-col-2'>",
 		"after_widget"	=> "</div>",
 	) );
 
 	register_sidebar( array(
-		"name"			=> __( "Footer kolumn 3", "kulgrej" ),
+		"name"			=> __( "Footer kolumn 3", "tema_kulgrej" ),
 		"id"			=> "footer3",
-		"description"	=> __( "Kolumn 3 i footern", "kulgrej" ),
+		"description"	=> __( "Kolumn 3 i footern", "tema_kulgrej" ),
 		"before_widget"	=> "<div class='footer-col-3'>",
 		"after_widget"	=> "</div>",
 	) );

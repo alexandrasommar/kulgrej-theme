@@ -42,7 +42,7 @@ get_header();
 		 	}
 		 	wp_reset_postdata();
 		} else {
-				echo _e("Tyvärr finns det inga kundcase publicerade");
+				echo _e( "Tyvärr finns det inga kundcase publicerade", "tema_kulgrej" );
 		} ?>
 	</section>
 </main> <?php

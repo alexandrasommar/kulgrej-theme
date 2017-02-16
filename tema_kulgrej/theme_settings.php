@@ -65,10 +65,10 @@ function tema_kulgrej_settings_page() { ?>
 						<tr>
 							<th scope="row"><label for="<?php echo $key; ?>"><?php _e( $value, "tema_kulgrej" ); ?></label></th>
 							<td> <?php
-							 	if ($key == "cookie") { ?>
-							 		<textarea name="<?php echo $key; ?>" id="<?php echo $key; ?>"><?php echo get_option($key); ?></textarea> <?php
+							 	if ( $key == "cookie" ) { ?>
+							 		<textarea name="<?php echo $key; ?>" id="<?php echo $key; ?>"><?php echo get_option( $key ); ?></textarea> <?php
 							 	} else { ?>
-									<input type="text" name="<?php echo $key; ?>" id="<?php echo $key; ?>" value="<?php echo get_option($key); ?> "> <?php
+									<input type="text" name="<?php echo $key; ?>" id="<?php echo $key; ?>" value="<?php echo get_option( $key ); ?> "> <?php
 								} ?>
 							</td>
 						</tr> <?php

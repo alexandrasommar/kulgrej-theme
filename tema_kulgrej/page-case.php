@@ -40,7 +40,7 @@ if (has_post_thumbnail()) { ?>
 				<article class="cases-content">
 
 					<div class="left">
-						<?php the_post_thumbnail('cases'); ?>
+						<?php the_post_thumbnail( 'cases' ); ?>
 					</div>
 
 					<div class="right">
@@ -63,7 +63,7 @@ if (has_post_thumbnail()) { ?>
 		 		}
 		 		wp_reset_postdata();
 		 	} else {
-				echo _e("Tyvärr finns det inga kundcase publicerade");
+				echo _e( "Tyvärr finns det inga kundcase publicerade", "tema_kulgrej" );
 		 	}
 		 ?>
 	</section>

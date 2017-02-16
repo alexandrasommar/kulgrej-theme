@@ -37,10 +37,10 @@ if (has_post_thumbnail()) { ?>
 
 <section class="contact-info">
 	<article class="about">
-		<?php the_field('left'); ?>
+		<?php the_field( 'left' ); ?>
 	</article>
 	<article class="about">
-		<?php the_field('right'); ?>
+		<?php the_field( 'right' ); ?>
 	</article>
 </section> <?php
 

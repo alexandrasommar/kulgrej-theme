@@ -57,7 +57,7 @@ class SocialMediaLinks extends WP_Widget {
 		$faceurl = $instance["facebook"];
 		$instaurl = $instance["instagram"];
 
-		echo $args[ "before_widget"];
+		echo $args["before_widget"];
 		echo "<a href='$faceurl' target='_blank'>";
 		echo "<i class='fa fa-facebook-square fa-3x' aria-hidden='true'></i>";
 		echo "</a>";
@@ -68,8 +68,8 @@ class SocialMediaLinks extends WP_Widget {
 	}
 }
 
-add_action('widgets_init', 'register_socialmediaurl_kulgrej');
+add_action( 'widgets_init', 'register_socialmediaurl_kulgrej' );
 function register_socialmediaurl_kulgrej() {
-	register_widget('SocialMediaLinks');
+	register_widget( 'SocialMediaLinks' );
 }
 ?>

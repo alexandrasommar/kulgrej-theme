@@ -12,13 +12,13 @@ get_header();
 		<section>
 			<article>
 				<a href="<?php the_permalink(); ?>"><h3><?php the_title(); ?></h3></a><?php
-				the_post_thumbnail('medium');
+				the_post_thumbnail( 'medium' );
 
 				the_excerpt();
 
 					}
 				} else {
-					echo _e("Tyvärr finns det inga inlägg inom den här kategorin.");
+					echo _e( "Tyvärr finns det inga inlägg inom den här kategorin.", "tema_kulgrej" );
 				} ?>
 			</article>
 		</section>

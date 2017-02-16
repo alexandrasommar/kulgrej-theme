@@ -9,7 +9,7 @@ get_header();
 if (has_post_thumbnail()) { ?>
 	<section class="header-img fixed" style="background-image:url(<?php
 	if( wp_is_mobile() ) {
-		echo the_post_thumbnail_url('large');
+		echo the_post_thumbnail_url( 'large' );
 	} else {
 		echo the_post_thumbnail_url();
 	} ?>);">
@@ -66,7 +66,7 @@ if (has_post_thumbnail()) { ?>
 				}
 				wp_reset_postdata();
 			} else {
-				_e("Det finns inga kundcitat publicerade");
+				_e( "Det finns inga kundcitat publicerade", "tema_kulgrej" );
 			} ?>
 		</section>
 

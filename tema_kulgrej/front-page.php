@@ -18,15 +18,15 @@ if (has_post_thumbnail()) { ?>
 		<div class="turning-words">
 			<h2 class="sentence">Vi gör <br>
 			    <div class="tw">
-					<span><?php _e("montrar") ?></span>
-					<span><?php _e("speciallösningar") ?></span>
-					<span><?php _e("event") ?></span>
-					<span><?php _e("scenografi") ?></span>
-					<span><?php _e("kickoffer") ?></span>
-					<span><?php _e("specialsnickerier") ?></span>
-					<span><?php _e("popup store") ?></span>
-					<span><?php _e("produktlanseringar") ?></span>
-					<span><?php _e("upplevelser") ?></span>
+					<span><?php _e( "montrar", "tema_kulgrej" ) ?></span>
+					<span><?php _e( "speciallösningar", "tema_kulgrej" ) ?></span>
+					<span><?php _e( "event", "tema_kulgrej" ) ?></span>
+					<span><?php _e( "scenografi", "tema_kulgrej" ) ?></span>
+					<span><?php _e( "kickoffer", "tema_kulgrej" ) ?></span>
+					<span><?php _e( "specialsnickerier", "tema_kulgrej" ) ?></span>
+					<span><?php _e( "popup store", "tema_kulgrej" ) ?></span>
+					<span><?php _e( "produktlanseringar", "tema_kulgrej" ) ?></span>
+					<span><?php _e( "upplevelser", "tema_kulgrej" ) ?></span>
 			    </div>
 	  		</h2>
   		</div>

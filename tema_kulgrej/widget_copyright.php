@@ -41,15 +41,15 @@ class CopyrightInfo extends WP_Widget {
 	public function widget( $args, $instance ) {
 
 		extract( $args );
-		echo $args[ "before_widget"];
+		echo $args["before_widget"];
 		echo "&copy; " . date('o') . " ";
 		echo $instance["copyright"];
-		echo $args[ "after_widget"];
+		echo $args["after_widget"];
 	}
 }
 
-add_action('widgets_init', 'register_copyrightinfo_kulgrej');
+add_action( 'widgets_init', 'register_copyrightinfo_kulgrej' );
 function register_copyrightinfo_kulgrej() {
-	register_widget('CopyrightInfo');
+	register_widget( 'CopyrightInfo' );
 }
 ?>
