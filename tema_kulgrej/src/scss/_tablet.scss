@@ -20,25 +20,29 @@
 *************************** */
 
 .turning-words {
-	margin: 0;
+	margin-top: 30px;
 	text-align: center;
 	width: 70%;
 
 	/*Sentence*/
 	.sentence{
 		display: inline-flex;
-		font-size: 32px;
+		font-size: 26px;
+		font-size: 2.6em;
+		margin: 0;
 		br {
 			display: none;
 		}
 	}
 
 	/*Vertical Sliding*/
-	.tw{
+	.tw {
 		display: inline;
 		text-indent: 8px;
+		font-size: 26px;
+		font-size: 2.6em;
 	}
-	.tw span{
+	.tw span {
 		color: $orange;
 		opacity: 0;
 		overflow: hidden;

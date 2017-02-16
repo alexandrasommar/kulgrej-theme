@@ -19,7 +19,7 @@ if (has_post_thumbnail()) { ?>
 	</section> <?php
 	} ?>
 
-	<main class="main-container main-quote"><?php
+	<main class="main-container main-quote"> <?php
 
 		//query to display all quote posts
 		$quotes = new WP_Query( array(
@@ -28,13 +28,13 @@ if (has_post_thumbnail()) { ?>
 			) ); ?>
 
 
-		<section class="quote-container"><?php
+		<div class="quote-container"> <?php
 
 			if( $quotes->have_posts() ) {
 
 				while( $quotes->have_posts() ) { ?>
 
-				<article class="quote-text line-height no-break"><?php
+				<article class="quote-text line-height no-break"> <?php
 					$quotes->the_post();
 
 					//gets the metabox field values
@@ -51,27 +51,22 @@ if (has_post_thumbnail()) { ?>
 						} ?>
 					</p>
 
-					<p><?php
+					<p> <?php
 						if( !empty( $title ) ) {
 							echo "<i>" . $title . "</i>" . ", ";
 						}
-
 						if( !empty( $company ) ) {
 							echo $company;
-						}
-					?>
+						} ?>
 					</p>
 				</article> <?php
-
 				}
 				wp_reset_postdata();
 			} else {
 				_e( "Det finns inga kundcitat publicerade", "tema_kulgrej" );
 			} ?>
-		</section>
-
-
-	</main><?php
+		</div>
+	</main> <?php
 
 
 get_footer();

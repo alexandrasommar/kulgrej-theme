@@ -51,6 +51,9 @@ h1 {
 h2 {
 	font-size: 26px;
 	font-size:2.6em;
+	letter-spacing: 2px;
+	line-height: 14px;
+	line-height: 1.4em;
 }
 
 h3 {
@@ -201,14 +204,19 @@ header {
 	/* Sentence */
 	.sentence {
 	     color: $lightgrey;
-	     font-size: 24px;
+		 font-family: 'Josefin Sans', sans-serif;
+	     font-size: 16px;
+	     font-size: 1.6em;
 		 font-weight: 400;
+		 margin-bottom: 5px;
 		 text-shadow: 1.5px 1.5px 1.5px $brown;
+		 text-transform: uppercase;
 	}
 
 	/* Horizontal Sliding */
 	.tw{
 		display: inline;
+		@extend .sentence;
 	}
 	 span{
 		color: $orange;
