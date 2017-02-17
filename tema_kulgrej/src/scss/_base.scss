@@ -172,10 +172,11 @@ header {
 .index-img {
 	background-color: $brown;
 	background-size: cover;
+	background-position: 50% 50%;
+	padding: 18vh 20% 31vh;
 	@include flexbox;
 	@include flex-direction(column);
 	@include justify-content(center);
-	padding: 20%;
 	.header-bg {
 		background: rgba(239, 155, 40, 0.7);
 		margin: 0 auto;
