@@ -6,7 +6,6 @@
 
 get_header();
 
-
 if (has_post_thumbnail()) { ?>
 	<section class="header-img fixed" style="background-image:url(<?php
 		if( wp_is_mobile() ) {
@@ -17,11 +16,10 @@ if (has_post_thumbnail()) { ?>
 		<div class="header-bg">
 			<h1 class="header-title"><?php the_title(); ?></h1>
 		</div>
-	</section><?php
-	}
-	?>
+	</section> <?php
+	} ?>
 
-<main class="main-container"><?php
+<main class="main-container"> <?php
 
 	// query to display customer cases
 	 $cases = new WP_Query( array(
@@ -29,7 +27,7 @@ if (has_post_thumbnail()) { ?>
 	    "post_status"		=>	"publish"
 	    ) ); ?>
 
-	<div class="cases-container"><?php
+	<div class="cases-container"> <?php
 
 		 if( $cases->have_posts() ) {
 
@@ -40,7 +38,7 @@ if (has_post_thumbnail()) { ?>
 				<div class="cases-content">
 
 					<div class="left"> <?php
-						the_post_thumbnail( 'cases' ); ?>
+						the_post_thumbnail(); ?>
 					</div>
 
 					<article class="right">

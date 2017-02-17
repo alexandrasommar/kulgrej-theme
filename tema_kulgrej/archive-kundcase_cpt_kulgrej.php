@@ -1,18 +1,16 @@
 <?php
 
-get_header();
+get_header(); ?>
 
-?>
+<main class="main-container"> <?php
 
-<main class="main-container"><?php
-
-	// query to display customer cases
+	// Query to display customer cases
 	 $cases = new WP_Query( array(
 	    "post_type"       	=>  "kundcase_cpt_kulgrej",
 	    "post_status"		=>	"publish"
 	    ) ); ?>
 
-	<section class="cases-container"><?php
+	<section class="cases-container"> <?php
 
 		if( $cases->have_posts() ) {
 
@@ -27,7 +25,7 @@ get_header();
 					</div>
 
 					<div class="right">
-						<a href="<?php the_permalink(); ?>"><h3><?php the_title(); ?></h3></a><?php
+						<a href="<?php the_permalink(); ?>"><h3><?php the_title(); ?></h3></a> <?php
 
 						the_excerpt();
 
@@ -38,7 +36,7 @@ get_header();
 							echo "<a href='" . esc_url( $term_link ) . "'>" . $term->name . "</a>" . " ";
 						} ?>
 					</div>
-				</article><?php
+				</article> <?php
 		 	}
 		 	wp_reset_postdata();
 		} else {

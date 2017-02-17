@@ -43,7 +43,7 @@ class SocialMediaLinks extends WP_Widget {
 		$instance = array();
 		if( !empty( $new_instance["facebook"] ) ) {
 				$instance["facebook"] = $new_instance["facebook"];
-			}
+		}
 
 		if ( !empty( $new_instance["instagram"] ) ) {
 			$instance["instagram"] = $new_instance["instagram"];
@@ -74,4 +74,5 @@ add_action( 'widgets_init', 'register_socialmediaurl_kulgrej' );
 function register_socialmediaurl_kulgrej() {
 	register_widget( 'SocialMediaLinks' );
 }
+
 ?>

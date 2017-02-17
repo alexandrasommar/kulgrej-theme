@@ -3,7 +3,7 @@
 add_action( "admin_menu", "setup_theme_admin_menus" );
 
 function setup_theme_admin_menus() {
-	$menu_name = _x( "Kulgrejs inställnignar", "tema_kulgrej" );
+	$menu_name = _x( "Kulgrejs inställningar", "tema_kulgrej" );
 	$page_title = _x( "Kulgrej", "tema_kulgrej" );
 
 	add_menu_page( $page_title, $menu_name, "edit_posts", "tema_kulgrej_settings", "tema_kulgrej_settings_page", "dashicons-smiley" );
@@ -34,7 +34,7 @@ function tema_kulgrej_settings_page() { ?>
 			if( isset( $_POST["submit"] ) ) {
 				if ( !empty( $_POST[$key] ) ) {
 					$new_value = esc_attr( $value );
-					//update in wp db
+					// Update in wp db
 					update_option( $key, $new_value ); ?>
 					<div id="settings-error-settings-updated" class="updated settings-error notice is-dismissable">
 						<p><strong><?php _e( "Inställningarna sparades", "tema_kulgrej" ); ?></strong></p>
@@ -81,4 +81,5 @@ function tema_kulgrej_settings_page() { ?>
 		</form>
 	</div> <?php
 }
+
 ?>

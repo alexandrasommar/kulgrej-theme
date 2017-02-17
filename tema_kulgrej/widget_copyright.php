@@ -13,8 +13,7 @@ class CopyrightInfo extends WP_Widget {
 	public function form( $instance ) {
 		$copyname = $instance["copyright"];
 		$copyid = esc_attr( $this->get_field_id( "copyright" ) );
-		$copy = $this->get_field_name( "copyright" );
-		?>
+		$copy = $this->get_field_name( "copyright" ); ?>
 		<p>
 			<label for="<?php echo $copyid ?>">Copyright: </label>
 			<input type="text"
@@ -24,8 +23,7 @@ class CopyrightInfo extends WP_Widget {
 				placeholder="Copyright"
 				class="widefat">
 		</p> <?php
-
-		}
+	}
 
 	// If a new input is made, update the field	in the db
 	public function update( $new_instance, $old_instance ) {
@@ -52,4 +50,5 @@ add_action( 'widgets_init', 'register_copyrightinfo_kulgrej' );
 function register_copyrightinfo_kulgrej() {
 	register_widget( 'CopyrightInfo' );
 }
+
 ?>

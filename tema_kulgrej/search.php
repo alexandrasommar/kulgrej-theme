@@ -9,11 +9,11 @@ get_header(); ?>
 			<h1 class="header-title"><?php _e( "Sökresultat", "tema_kulgrej" ); ?></h1>
 		</div>
 	</section>
-<main class="main-container search"><?php
+<main class="main-container search"> <?php
 		if ( have_posts() ) { ?>
-	<h1 class="search-result"><?php printf( __( "Sökresultat för: %s", "tema_kulgrej" ), get_search_query() ); ?></h1><?php
+	<h1 class="search-result"><?php printf( __( "Sökresultat för: %s", "tema_kulgrej" ), get_search_query() ); ?></h1> <?php
 	} else { ?>
-		<h2 class="search-result"><?php printf( __( "Tyvärr hittades inga resultat för: %s", "tema_kulgrej" ), get_search_query() ); ?></h2><?php
+		<h2 class="search-result"><?php printf( __( "Tyvärr hittades inga resultat för: %s", "tema_kulgrej" ), get_search_query() ); ?></h2> <?php
 
 	}
 
@@ -26,16 +26,11 @@ get_header(); ?>
 					<p><?php the_excerpt(); ?></p>
 					<p class="search-category"><?php the_category(); ?></p>
 				</div>
-			</a>
-		<?php
+			</a> <?php
 		}
-	}
+	} ?>
+</main> <?php
 
-	?>
-</main>
-
-
-<?php
 get_footer();
 
 ?>

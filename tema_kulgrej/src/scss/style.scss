@@ -3,7 +3,7 @@
 @import "assets/mixins";
 @import "base";
 
-/*topToBottom Animation used in tablet view
+/* topToBottom Animation used in tablet view
 and larger needs to be defined here to
 work in Internet Explorer */
 @keyframes topToBottom{
@@ -17,7 +17,8 @@ work in Internet Explorer */
 
 @media screen and (min-width:736px) {
 	@import "_tablet";
-	}
+}
+
 @media screen and (min-width:1150px) {
 	@import "_desktop";
 }

@@ -108,16 +108,16 @@ header {
 			height: 100%;
 			padding-left: 20px;
 			.custom-logo {
-				max-width: 190px;
 				height: auto;
+				max-width: 190px;
 				padding-top: 5px;
 			}
 		}
 		.right {
 			font-size: 14px;
-			@include justify-content(flex-end);
 			padding-right: 20px;
 			width: 480px;
+			@include justify-content(flex-end);
 
 		}
 		.menu-menu-container ul {
@@ -148,8 +148,8 @@ header {
 *************************** */
 
 .header-img {
-	background-position: 50% 50%;
 	background-attachment: initial;
+	background-position: 50% 50%;
 	background-size: cover;
 	max-height: 100%;
 	padding: 60px 0;
@@ -190,7 +190,6 @@ header {
 			box-sizing: border-box;
 			max-width: 100%;
 			padding: 0 15%;
-
 		}
 	}
 }
@@ -207,10 +206,10 @@ header {
 
 	/* Sentence */
 	.sentence {
-	     color: $lightgrey;
+		 color: $lightgrey;
 		 font-family: 'Josefin Sans', sans-serif;
-	     font-size: 16px;
-	     font-size: 1.6em;
+		 font-size: 16px;
+		 font-size: 1.6em;
 		 font-weight: 400;
 		 margin-bottom: 5px;
 		 text-shadow: 1.5px 1.5px 1.5px $brown;
@@ -284,10 +283,10 @@ header {
 		ABOUT PAGE
 *************************** */
 .about-us {
+	margin: 0 20px;
 	max-height: 100%;
 	@include flexbox;
 	@include justify-content(center);
-	margin: 0 20px;
 	.about-text {
 		height: 80%;
 		width: 100%;
@@ -323,7 +322,6 @@ header {
 	margin-bottom: 0;
 }
 .quote-container {
-	/* padding-bottom: 50px; */
 	@include flexbox;
 	@include flex-direction(column);
 	.quote-text {
@@ -350,7 +348,10 @@ header {
 		margin: 40px 0;
 		@include flexbox;
 		@include flex-direction(column);
-
+		.left img {
+			height: auto;
+			max-width: 96%;
+		}
 	}
 }
 
@@ -377,9 +378,9 @@ header {
 	max-width: 100%;
 	.wpcf7-form-control {
 		border: 1px solid $blue;
+		box-sizing: border-box;
 		font-family: 'Catamaran', sans-serif;
 		width: 100%;
-		box-sizing: border-box;
 	}
 	.wpcf7-submit {
 		background-color: $blue;
@@ -397,18 +398,18 @@ header {
 		}
 	}
 	.wpcf7-textarea {
-		padding: 10px;
 		box-sizing: border-box;
+		padding: 10px;
 	}
 	.g-recaptcha {
 		border: none;
-		padding-left: calc((100% - 304px)/2);
 		box-sizing: border-box;
+		padding-left: calc((100% - 304px)/2);
 	}
 	input {
+		box-sizing: border-box;
 		font-size: 15px;
 		padding: 10px;
-		box-sizing: border-box;
 	}
 }
 
@@ -509,18 +510,14 @@ footer {
 			@include transition(all 200ms ease-in-out);
 		}
 	}
-
-
 }
 .search-result {
 	text-transform: none;
-
 }
 
 .list-result {
 	a:hover {
 		font-weight: normal;
 		@include transition(all 200ms ease-in-out);
-
 	}
 }

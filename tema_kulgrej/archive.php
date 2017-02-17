@@ -1,9 +1,8 @@
 <?php
-get_header();
-?>
+get_header(); ?>
 	<main class="main-container">
 
-		<h2><?php the_archive_title(); ?></h2><?php
+		<h2><?php the_archive_title(); ?></h2> <?php
 
 		if( have_posts() ) {
 			while( have_posts() ) {
@@ -11,7 +10,7 @@ get_header();
 
 		<section>
 			<article>
-				<a href="<?php the_permalink(); ?>"><h3><?php the_title(); ?></h3></a><?php
+				<a href="<?php the_permalink(); ?>"><h3><?php the_title(); ?></h3></a> <?php
 				the_post_thumbnail('medium');
 
 				the_excerpt();

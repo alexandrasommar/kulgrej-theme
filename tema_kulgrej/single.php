@@ -10,14 +10,14 @@ if (has_post_thumbnail()) { ?>
 		<div class="header-bg">
 			<h1 class="header-title"><?php the_title(); ?></h1>
 		</div>
-	</section><?php
+	</section> <?php
 	}
 ?>
-<main class="main-container"><?php
+<main class="main-container"> <?php
 	if( have_posts() ) {
 		while( have_posts() ) {
 			the_post(); ?>
-			<h3><?php the_title(); ?></h3><?php
+			<h3><?php the_title(); ?></h3> <?php
 			the_content();
 
 			$terms = wp_get_post_terms( get_the_ID(), "kundcase_projecttype" );
@@ -31,10 +31,9 @@ if (has_post_thumbnail()) { ?>
 		if ( comments_open() || get_comments_number() ) {
 		    comments_template();
 		}
-	}
-	?>
+	} ?>
 
-</main><?php
+</main> <?php
 
 get_footer();
 

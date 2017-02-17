@@ -16,6 +16,8 @@
 			</section> <?php
 		} ?>
 	</div>
-</main> <!-- /main-container -->
-<?php
-get_footer(); ?>
+</main> <?php
+
+get_footer();
+
+?>

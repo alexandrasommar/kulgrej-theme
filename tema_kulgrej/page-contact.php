@@ -19,7 +19,7 @@ get_header(); ?>
 		}
 	} ?>
 
-</main> <!-- /main-container --> <?php
+</main> <?php
 
 get_footer(); ?>
 
@@ -143,7 +143,7 @@ function initMap() {
 		]
 	});
 	var marker = new google.maps.Marker({
-					position: {lat: <?php echo get_option('lat'); ?>, lng: <?php echo get_option('lng'); ?>},
+					position: {lat: <?php echo get_option( 'lat' ); ?>, lng: <?php echo get_option( 'lng' ); ?>},
 					map: map,
 					title: "<?php echo get_option( 'name' ); ?>, <?php echo get_option( 'address' ); ?>, <?php echo get_option( 'postal' ); ?>"
 				});
