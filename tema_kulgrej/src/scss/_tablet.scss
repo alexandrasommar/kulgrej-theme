@@ -146,8 +146,7 @@
 
 .cases-container {
 	.cases-content {
-		@include align-items(center);
-		@include justify-content(space-around);
+		@include justify-content(center);
 	}
 }
 

@@ -2,10 +2,18 @@
 		CASES PAGE
 *************************** */
 
-.cases-content {
-	@include flex-direction(row);
-}
 
+.cases-container {
+	.cases-content {
+		@include flex-direction(row);
+	}
+	.left {
+		max-width: 50%;
+	}
+	.right {
+		max-width: 50%;
+	}
+}
 
 /* ***************************
 		ABOUT PAGE
